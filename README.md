@@ -1,39 +1,42 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<h1>The Dice Depot 🎲</h1>
 
-Welcome Scrambles86,
+<p>The Dice Dept is an e-commerce wbsite, designed to allow fans of Tabletop Gaming both a clear and concise shopping destination, 
+as well as giving them the ability to sell their unwanted games.</p>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+<br>
 
-## Gitpod Reminders
+<h2>User Experience</h2>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<h3>Project Goals</h3>
 
-`python3 -m http.server`
+<p>The primary goals of The Dice Depot are to give Tabletop Gaming fans an easy one stop shop. It aims to have an easy to navigate selection of the most popular current board
+games, and also aims to allow user to communicate with the site admins in order to sell their unwanted games in an efficient manner.</p>
 
-A blue button should appear to click: *Make Public*,
+<h3>User Goals</h3>
+<ul>
+    <li>An up to date selection of the most popular current titles for easy purchase, such as Scythe, Spirit Island and Gloomhaven</li>
+    <li>The ability to create an account to check on order statuses and past orders</li>
+    <li>Easy to navigate interface, along with the ability to easily organise games by the user's choice of category</li>
+    <li>A responsive site that works on tablet, mobile and desktop</li>
+    <li>The ability to sell unwanted games to the store</li>
+    <li>A fast estimate on sell price that doesn't require any commitment from the user</li>
+</ul>
 
-Another blue button should appear to click: *Open Browser*.
+<h3>Admin Goals</h3>
+<ul>
+    <li>Sleek and responsive site design</li>
+    <li>An easy to manage payment system</li>
+    <li>The ability to update and delete products from the store library</li>
+    <li>A form that requires photographic evidence of the quality of games, thereby allowing the right to refuse games that are in unacceptable condition.</li>
+    <li>A robust forumla to determine prices offered for second hand games</li>
+</ul>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<h3>User Stories</h3>
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+<ul>
+    <li>As a user, I expect to be able to easily log in to my profile to be able to check on the status of past and present orders.</li>
+    <li>As a user, I would like to be able to sell my unwanted games. However, I would like to know the price that I would be offered for said games,
+    without being pressured into commiting to selling for that price.</li>
+    <li>As a user, and a big fan of tabletop games who knows exactly the sort of games that I like, 
+    I would like the ability to be able to sort games by length of play, publisher and recommended age range.</li>
+</ul>
