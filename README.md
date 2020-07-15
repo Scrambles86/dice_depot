@@ -40,3 +40,34 @@ games, and also aims to allow user to communicate with the site admins in order 
     <li>As a user, and a big fan of tabletop games who knows exactly the sort of games that I like, 
     I would like the ability to be able to sort games by length of play, publisher and recommended age range.</li>
 </ul>
+
+<h2>Design Choices</h2>
+
+<h3>Fonts</h3>
+
+<p>The primary font of The Dice Depot is Spectral SC, imported from Google Fonts. I wanted a font that was clearly stylised, but still looked professional
+and remained easy to read. Spectral SC fit this criteria, as well as retaining a regal, fantasy-esque look, akin to the rulebooks of many fantasy based games.
+As such, I felt that this was a perfect fit.</p>
+
+<h3>Icons</h3>
+
+<p>All icons are imported from FontAwesome. I decided to keep it simple in terms of icons so as to keep the page readable and easy to navigate. I opted to use a shopping
+cart icon for the user's cart, and the profile icon for their profile page, and retained a clear, readable navbar.</p>
+
+<h3>Background Image</h3>
+
+<p>I wanted a background that would convey the purpose of the site, but that wasn't too busy or difficult to look at. I opted for a nice, clean blue background with a set of dice on
+the right hand side, in order to keep the front page minimalist, but to still imply the purpose of the site to the user.</p>
+
+<h3>Colour Scheme</h3>
+
+<p>Similarly to the background image, I wanted the colour scheme to be fun, but not too busy.</p>
+
+<ul>
+    <li>Primary Colour : #264027; "Phthalo Green" - A forest green for the navbar that isn't too bright to look at and contrasts well with the main site image</li>
+    <li>Secondary Colour : #6F732F; "Spanish Bistro" - A variant in the Phthalo Green palette that ebbs slightly towards yellow. Again, a bright colour but one that is easy on the eyes.</li>
+    <li>Tertiary Colour : #B38A58; "Camel" - A calm yellow used for highliting agaisnt the green background whilst still blending somewhat.</li>
+    <li>White Colour : #ffffff; "White" - Shows up well against the Phthalo Green</li>
+    <li>Black Colour : #000; "Black" - Standard CSS black</li>
+    <li>Danger Colour : #ff0000; "Red" - Used to denote required elements and errors</li>
+</ul>
