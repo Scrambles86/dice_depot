@@ -18,10 +18,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
         {% endblock %}
-        
+
     <title>The Dice Depot</title>
 </head>
     <body>
+        <header class="container-fluid fixed-top"></header>
+
+        {% if messages %}
+        <div class="message-container"></div>
+        {% endif %}
 
 
     </body>
