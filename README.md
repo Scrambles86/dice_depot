@@ -77,7 +77,7 @@ cart icon for the user's cart, and the profile icon for their profile page, and 
 <h3>Background Image</h3>
 
 <p>I wanted a background that would convey the purpose of the site, but that wasn't too busy or difficult to look at. I opted for a nice, clean blue background with a set of dice on
-the right hand side, in order to keep the front page minimalist, but to still imply the purpose of the site to the user. The image was taken from Unspash, which is a royalty free image library.</p>
+the right hand side, in order to keep the front page minimalist, but to still imply the purpose of the site to the user. The image was taken from Unsplash, which is a royalty free image library.</p>
 
 <h3>Colour Scheme</h3>
 
@@ -104,7 +104,7 @@ the right hand side, in order to keep the front page minimalist, but to still im
 | Max. Players  | max_players  | max_digits=3 |  IntegerField  |
 | Min. Age  | min_age  | max_digits=2 |  IntegerField  |
 | Description  | description  | default="some string" |  TextField  |
-| Image  | image_url  | upload_to"static/images |  ImageField  |
+| Image  | image_url  | upload_to"static/images" |  ImageField  |
 | RRP  | msrp  | max_digits=6, decimal_places=2, default=0.0 |  DecimalField  |
 | Price  | price  | max_digits=6, decimal_places=2 |  DecimalField  |
 
@@ -157,11 +157,11 @@ the right hand side, in order to keep the front page minimalist, but to still im
 <strong>Languages:</strong>
 
 <ul>
-    <li><a href="https://html.spec.whatwg.org/" target="_blank"></a>HTML</li>
-    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"></a>CSS</li>
-    <li><a href="https://www.javascript.com/" target="_blank"></a>JavaScript</li>
-    <li><a href="https://www.json.org/json-en.html" target="_blank"></a>JSON</li>
-    <li><a href="https://www.python.org/" target="_blank"></a>Python</li>
+    <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML</a></li>
+    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">CSS</a></li>
+    <li><a href="https://www.javascript.com/" target="_blank">JavaScript</a></li>
+    <li><a href="https://www.json.org/json-en.html" target="_blank">JSON</a></li>
+    <li><a href="https://www.python.org/" target="_blank">Python</a></li>
 </ul>
 
 <strong>Tools & Libraries:</strong>
@@ -178,3 +178,16 @@ the right hand side, in order to keep the front page minimalist, but to still im
     <li><a href="https://gunicorn.org/" target="_blank">Gunicorn</a></li>
     <li><a href="https://www.gitpod.io/" target="_blank">Gitpod</a></li>
 </ul>
+
+<strong>Databases:</strong>
+
+<ul>
+    <li><a href="https://www.postgresql.org/" target="_blank"></a>PostgreSQL - Production</li>
+    <li><a href="https://www.sqlite.org/index.html" target="_blank"></a>SQlite3 - Development</li>
+</ul>
+
+<h2>Testing</h2>
+
+<h2>Bugs</h2>
+
+<h2>Deployment</h2>
