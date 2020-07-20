@@ -129,3 +129,52 @@ the right hand side, in order to keep the front page minimalist, but to still im
 | Order  | order  | Order, null=False |  ForeignKey  |
 | Product  | product  | Product, null=False |  ForeignKey  |
 | Quantity  | quantity  | blank=False |  IntegerField  |
+
+
+<h2>Features</h2>
+
+<h3>Current Features</h3>
+
+<ul>
+    <li>Account creation through Django, allowing users to login and check past orders</li>
+    <li>The ability for user to update their profile information</li>
+    <li>Dropdown bar that organises products by specific criteria such as Publisher and minimum recommended age</li>
+    <li>Checkout function created using the Stripe API</li>
+    <li>Full game catalogue created using the Board Game Atlas API</li>
+    <li>A shopping cart that allows users to amend the items currently in their basket</li>
+    <li>A from on the Sell page that allows users to enter information regarding a game that send them back an estimate price</li>
+</ul>
+
+<h3>Features to implement in the future</h3>
+
+<ul>
+    <li>A rewards system, giving cutomers points based on their past purchases</li>
+    <li>The ability for users to reset forgotten or lost passwords</li>
+</ul>
+
+<h2>Technologies Used</h2>
+
+<strong>Languages:</strong>
+
+<ul>
+    <li><a href="https://html.spec.whatwg.org/" target="_blank"></a>HTML</li>
+    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"></a>CSS</li>
+    <li><a href="https://www.javascript.com/" target="_blank"></a>JavaScript</li>
+    <li><a href="https://www.json.org/json-en.html" target="_blank"></a>JSON</li>
+    <li><a href="https://www.python.org/" target="_blank"></a>Python</li>
+</ul>
+
+<strong>Tools & Libraries:</strong>
+
+<ul>
+    <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+    <li><a href="https://git-scm.com/" target="_blank">Git</a></li>
+    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+    <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a></li>
+    <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Pip_(package_manager)" target="_blank">PIP</a></li>
+    <li><a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+    <li><a href="https://stripe.com/docs/api" target="_blank">Stripe</a></li>
+    <li><a href="https://gunicorn.org/" target="_blank">Gunicorn</a></li>
+    <li><a href="https://www.gitpod.io/" target="_blank">Gitpod</a></li>
+</ul>
