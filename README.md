@@ -92,3 +92,40 @@ the right hand side, in order to keep the front page minimalist, but to still im
     <li>Danger Colour : #ff0000; "Red" - Used to denote required elements and errors</li>
 </ul>
 
+<h2>Data Models</h2>
+
+<h3>The Product Model</h3>
+
+| Name   | Key In API   | Validation    | Data Type   |
+|-  |-  |-  |-  |
+| Game  | name  | max_length=254, default="" |  CharField  |
+| Year  | year_published  | max_digits=4 |  IntegerField  |
+| Min. Players  | min_players  | max_digits=3 |  IntegerField  |
+| Max. Players  | max_players  | max_digits=3 |  IntegerField  |
+| Min. Age  | min_age  | max_digits=2 |  IntegerField  |
+| Description  | description  | default="some string" |  TextField  |
+| Image  | image_url  | upload_to"static/images |  ImageField  |
+| RRP  | msrp  | max_digits=6, decimal_places=2, default=0.0 |  DecimalField  |
+| Price  | price  | max_digits=6, decimal_places=2 |  DecimalField  |
+
+<h3>The Order Model</h3>
+
+| Name   | Key In db   | Validation    | Data Type   |
+|-  |-  |-  |-  |
+| User  | user  | User, on_delete=models.PROTECT |  ForeignKey  |
+| Full Name  | full_name  | max_length=50, blank=False |  CharField  |
+| Phone Number  | phone_number  | max_length=20, blank=False |  CharField  |
+| Country  | country  | max_length=40, blank=False |  CharField  |
+| Postcode  | postcode  | max_length=40, blank=False |  CharField  |
+| City  | city  | max_length=40, blank=False |  CharField  |
+| Address Line 1  | address_line_1  | max_length=50, blank=False |  CharField  |
+| Address Line 2  | address_line_2  | max_length=50, blank=False |  CharField  |
+| Date  | date  |  |  DateField  |
+
+<h3>The OrderItem Model</h3>
+
+| Name   | Key In db   | Validation    | Data Type   |
+|-  |-  |-  |-  |
+| Order  | order  | Order, null=False |  ForeignKey  |
+| Product  | product  | Product, null=False |  ForeignKey  |
+| Quantity  | quantity  | blank=False |  IntegerField  |
