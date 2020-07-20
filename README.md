@@ -1,6 +1,6 @@
 <h1>The Dice Depot 🎲</h1>
 
-<p>The Dice Dept is an e-commerce wbsite, designed to allow fans of Tabletop Gaming both a clear and concise shopping destination, 
+<p>The Dice Dept is an e-commerce website, designed to allow fans of Tabletop Gaming both a clear and concise shopping destination, 
 as well as giving them the ability to sell their unwanted games.</p>
 
 <br>
