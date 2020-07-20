@@ -44,21 +44,21 @@ games, and also aims to allow user to communicate with the site admins in order 
 <h2>Wireframes</h2>
 
 <ul>
-    <li><a href="https://i.imgur.com/Wnoc6ZP.png" target="_blank"></a>Front Page - Desktop</li>
-    <li><a href="https://i.imgur.com/ijVf2QB.png" target="_blank"></a>Shop - Desktop</li>
-    <li><a href="https://i.imgur.com/2xb0GQS.png" target="_blank"></a>Sell - Desktop</li>
-    <li><a href="https://i.imgur.com/TwQcKiC.png" target="_blank"></a>Profile - Desktop</li>
-    <li><a href="https://i.imgur.com/Jgrhrfw.png" target="_blank"></a>Basket - Desktop</li>
-    <li><a href="https://i.imgur.com/qel7SIv.png" target="_blank"></a>Front Page - Tablet</li>
-    <li><a href="https://i.imgur.com/CEspLjE.png" target="_blank"></a>Shop - Tablet</li>
-    <li><a href="https://i.imgur.com/wxQWVlY.png" target="_blank"></a>Sell - Tablet</li>
-    <li><a href="https://i.imgur.com/ijCzcUy.png" target="_blank"></a>Profile - Tablet</li>
-    <li><a href="https://i.imgur.com/MoBgsvf.png" target="_blank"></a>Basket - Tablet</li>
-    <li><a href="https://i.imgur.com/tqNqMNy.png" target="_blank"></a>Front Page - Mobile</li>
-    <li><a href="https://i.imgur.com/RrPEZCw.png" target="_blank"></a>Shop - Mobile</li>
-    <li><a href="https://i.imgur.com/LGDrhNo.png" target="_blank"></a>Sell - Mobile</li>
-    <li><a href="https://i.imgur.com/CAYBXmN.png" target="_blank"></a>Profile - Mobile</li>
-    <li><a href="https://i.imgur.com/wsAggTv.png" target="_blank"></a>Basket - Mobile</li>
+    <li><a href="https://i.imgur.com/Wnoc6ZP.png" target="_blank">Front Page - Desktop</a></li>
+    <li><a href="https://i.imgur.com/ijVf2QB.png" target="_blank">Shop - Desktop</a></li>
+    <li><a href="https://i.imgur.com/2xb0GQS.png" target="_blank">Sell - Desktop</a></li>
+    <li><a href="https://i.imgur.com/TwQcKiC.png" target="_blank">Profile - Desktop</a></li>
+    <li><a href="https://i.imgur.com/Jgrhrfw.png" target="_blank">Basket - Desktop</a></li>
+    <li><a href="https://i.imgur.com/qel7SIv.png" target="_blank">Front Page - Tablet</a></li>
+    <li><a href="https://i.imgur.com/CEspLjE.png" target="_blank">Shop - Tablet</a></li>
+    <li><a href="https://i.imgur.com/wxQWVlY.png" target="_blank">Sell - Tablet</a></li>
+    <li><a href="https://i.imgur.com/ijCzcUy.png" target="_blank">Profile - Tablet</a></li>
+    <li><a href="https://i.imgur.com/MoBgsvf.png" target="_blank">Basket - Tablet</a></li>
+    <li><a href="https://i.imgur.com/tqNqMNy.png" target="_blank">Front Page - Mobile</a></li>
+    <li><a href="https://i.imgur.com/RrPEZCw.png" target="_blank">Shop - Mobile</a></li>
+    <li><a href="https://i.imgur.com/LGDrhNo.png" target="_blank">Sell - Mobile</a></li>
+    <li><a href="https://i.imgur.com/CAYBXmN.png" target="_blank">Profile - Mobile</a></li>
+    <li><a href="https://i.imgur.com/wsAggTv.png" target="_blank">Basket - Mobile</li>
 </ul>
 
 <h2>Design Choices</h2>
