@@ -41,6 +41,26 @@ games, and also aims to allow user to communicate with the site admins in order 
     I would like the ability to be able to sort games by length of play, publisher and recommended age range.</li>
 </ul>
 
+<h2>Wireframes</h2>
+
+<ul>
+    <li><a href="https://i.imgur.com/Wnoc6ZP.png" target="_blank"></a>Front Page - Desktop</li>
+    <li><a href="https://i.imgur.com/ijVf2QB.png" target="_blank"></a>Shop - Desktop</li>
+    <li><a href="https://i.imgur.com/2xb0GQS.png" target="_blank"></a>Sell - Desktop</li>
+    <li><a href="https://i.imgur.com/TwQcKiC.png" target="_blank"></a>Profile - Desktop</li>
+    <li><a href="https://i.imgur.com/Jgrhrfw.png" target="_blank"></a>Basket - Desktop</li>
+    <li><a href="https://i.imgur.com/qel7SIv.png" target="_blank"></a>Front Page - Tablet</li>
+    <li><a href="https://i.imgur.com/CEspLjE.png" target="_blank"></a>Shop - Tablet</li>
+    <li><a href="https://i.imgur.com/wxQWVlY.png" target="_blank"></a>Sell - Tablet</li>
+    <li><a href="https://i.imgur.com/ijCzcUy.png" target="_blank"></a>Profile - Tablet</li>
+    <li><a href="https://i.imgur.com/MoBgsvf.png" target="_blank"></a>Basket - Tablet</li>
+    <li><a href="https://i.imgur.com/tqNqMNy.png" target="_blank"></a>Front Page - Mobile</li>
+    <li><a href="https://i.imgur.com/RrPEZCw.png" target="_blank"></a>Shop - Mobile</li>
+    <li><a href="https://i.imgur.com/LGDrhNo.png" target="_blank"></a>Sell - Mobile</li>
+    <li><a href="https://i.imgur.com/CAYBXmN.png" target="_blank"></a>Profile - Mobile</li>
+    <li><a href="https://i.imgur.com/wsAggTv.png" target="_blank"></a>Basket - Mobile</li>
+</ul>
+
 <h2>Design Choices</h2>
 
 <h3>Fonts</h3>
