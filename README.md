@@ -1,7 +1,8 @@
 <h1>The Dice Depot 🎲</h1>
 
-<p>The Dice Dept is an e-commerce website, designed to allow fans of Tabletop Gaming both a clear and concise shopping destination, 
-as well as giving them the ability to sell their unwanted games.</p>
+<p>The Dice Dept is an e-commerce website, designed to be the best destination for fans of Tabletop Gaming, 
+giving them both a wide variety of the most popular and up to date titles, 
+and the ability to sell their unwanted games to us.</p>
 
 <br>
 
@@ -35,10 +36,9 @@ games, and also aims to allow user to communicate with the site admins in order 
 
 <ul>
     <li>As a user, I expect to be able to easily log in to my profile to be able to check on the status of past and present orders.</li>
-    <li>As a user, I would like to be able to sell my unwanted games. However, I would like to know the price that I would be offered for said games,
-    without being pressured into commiting to selling for that price.</li>
-    <li>As a user, and a big fan of tabletop games who knows exactly the sort of games that I like, 
-    I would like the ability to be able to sort games by length of play, publisher and recommended age range.</li>
+    <li>As a user, I would like to be able to sell my unwanted games.</li> 
+    <li>As a user, I would like to know the price that I would be offered for selling games, without being pressured into commiting to selling for that price.</li>
+    <li>As a user, I would like the ability to be able to sort games by length of play, publisher and recommended age range.</li>
 </ul>
 
 <h2>Wireframes</h2>
