@@ -22,3 +22,7 @@ body {
     background : #264027;
     color: #ffffff;
 }
+
+.border-black {
+    border: 1px solid #000000 !important;
+}
