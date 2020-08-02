@@ -37,3 +37,10 @@ body {
         max-width: 80%;
     }
 }
+
+/* ------------- Card Styling */
+
+.card-style {
+    padding: 60px 0px;
+    background-color: #B38A58;
+}
