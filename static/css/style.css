@@ -17,3 +17,8 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+
+.btn-main {
+    background : #264027;
+    color: #ffffff;
+}
