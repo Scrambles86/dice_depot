@@ -10,6 +10,8 @@ body {
     font-family: 'Spectral SC', serif;
 }
 
+/* -------------- Bulma Styling */
+
 .icon {
     align-items : center;
     display: inline-flex;
@@ -25,4 +27,12 @@ body {
 
 .border-black {
     border: 1px solid #000000 !important;
+}
+
+/* -------------- Media Queries */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
 }
