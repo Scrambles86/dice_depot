@@ -18,7 +18,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.models import User
-from rest_framework import routers, serializers, viewsets
+from rest_framework.views import  APIView
+from rest_framework_api_key.models import APIKey
+from rest_framework_api_key.permissions import HasAPIKey
 
 urlpatterns = [
     path('admin/', admin.site.urls),
