@@ -21,27 +21,74 @@
             <h2 class="display-4">Sell   <a href=""><i class="fas fa-money-bill-wave"></i></h2></a>
         </div>
         <div class="col-sm">
-            <h2 class="display-4">Roll   <a href="https://www.youtube.com/user/WatchItPlayed" target="_blank"><i class="fas fa-dice-d20"></i></h2></a>
+            <h2 class="display-4">Roll   <a href="http://diceroller.co/d20roller" target="_blank"><i class="fas fa-dice-d20"></i></h2></a>
         </div>
     </div>
  </div>
- <br>   
-  <div class="container py-5 mt-5">
+
+    <br>   
+
+<div class="container my-5 mt-5">
     <h2 class="font-weight-light text-center">Sell To Us!</h2>
     <p class="text-center">Done with a game? Unwanted gift? You can sell to us!</p>
-    <div class="row h-100">
-        <div class="col-sm text-center">
-            <h3>Step One   <a href=""><i class="fas fa-dice-one"></i></h3></a>
-            <p class="text-center">Click to fill out our sales form with your game details</p>
+        <div class="row h-100">
+            <div class="col-sm text-center bg-info">
+                <h3>Step One   <a href=""><i class="fas fa-dice-one"></i></h3></a>
+                <p class="text-center">Click to fill out our sales form with your game details</p>
+            </div>
+            <div class="col-sm text-center bg-light">
+                <h3>Step Two   <a href=""><i class="fas fa-dice-two"></i></h3></a>
+                <p class="text-center">We'll email you a quote for your game</p>
+            </div>
+            <div class="col-sm text-center bg-success">
+                <h3>Step Three   <a href=""><i class="fas fa-dice-three"></i></h3></a>
+                <p class="text-center">If you agree with our quote, send your game to us and wait to get paid!</p>
+            </div>
         </div>
-        <div class="col-sm text-center">
-            <h3>Step Two   <a href=""><i class="fas fa-dice-two"></i></h3></a>
-            <p class="text-center">We'll email you a quote for your game</p>
-        </div>
-        <div class="col-sm text-center">
-            <h3>Step Three   <a href=""><i class="fas fa-dice-three"></i></h3></a>
-            <p class="text-center">If you agree with our quote, send your game to us and wait to get paid!</p>
-        </div>
+</div>
+
+<div class="jumbotron my-5 text-center">
+    <h3>Visit <a href="https://www.youtube.com/user/WatchItPlayed" target="_blank">Watch It Played</a> for walkthroughs for our most popular games!</h3>
+    <!--Carousel Wrapper-->
+<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#video-carousel-example" data-slide-to="1"></li>
+    <li data-target="#video-carousel-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://www.youtube.com/watch?v=ffMLIL5qGQg" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://www.youtube.com/watch?v=6la-2F6EtyM" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://www.youtube.com/watch?v=lgDgcLI2B0U" type="video/mp4" />
+      </video>
     </div>
   </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--Carousel Wrapper-->
+</div>
+
 {% endblock %}
