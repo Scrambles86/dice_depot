@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4kk8s$^9t-pu&3wmomxu$)(8(pe&mjuv)8awn0__-k%17yzhae'
 
 # API 
-API_SECRET_KEY = os.environ.get('HTTP_API_SECRET_KEY', '')
+API_SECRET_KEY = os.environ.get('API_SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
