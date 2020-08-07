@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'home',
     'bag',
     'products',
+    'myapi',
 ]
 
 MIDDLEWARE = [
