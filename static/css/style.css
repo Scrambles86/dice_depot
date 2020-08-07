@@ -30,6 +30,10 @@ body {
     color: #ffffff;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
 .border-black {
     border: 1px solid #000000 !important;
 }
@@ -42,16 +46,25 @@ body {
     }
 }
 
-/* ------------- Header Styling */
-
-.header-container {
-    padding-top: 164px;
-}
-
-
 /* ------------- Card Styling */
 
 .card-style {
     padding: 60px 0px;
     background-color: #B38A58;
 }
+
+/* ------------- Navbar Styling */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position : fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
+
+.header-container {
+    padding-top: 164px;
+}
+
