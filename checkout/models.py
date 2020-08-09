@@ -30,6 +30,13 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
+    def update_total(self):
+        """
+        Updates total in the event of the bag beign edited
+        """
+        self.order_number = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.save()
+
     def save(self, *args, **kwargs):
         """
         Save override that sets the order number
