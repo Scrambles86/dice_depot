@@ -15,6 +15,9 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p>Enter your details to complete your order : </p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                </form>
             </div>
         </div>
 
