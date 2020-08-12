@@ -49,8 +49,7 @@
                         <div class="mb-3" id="card-errors"></div>
                     </fieldset>
                 </form>
-            </div>
-        </div>
+            
 
         <div class="button mt-5 mb-2">
             <a href="{% url 'view_bag' %}">
@@ -59,7 +58,12 @@
             <button id="submit-button">
                 <span>Confirm Order</span>
             </button>
+            <p class="my-0">
+                <span>Order will be confirmed for : <strong>${{ grand_total|floatformat:2 }}</strong></span>
+            </p>
+            </div>
         </div>
+    </div>
 
 
 {% endblock %}
