@@ -15,8 +15,10 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p>Enter your details to complete your order : </p>
+                <!--Checkout form -->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
+                    <!-- Customer detaisl fieldset -->
                     <fieldset>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
@@ -40,6 +42,7 @@
                         {% endif %}
                     </div>
                     </fieldset>
+                    <!-- Seperate fieldset for payment details -->
                     <fieldset class="px-3">
                         <legend class="small text-black px-2 w-auto">Payment Details</legend>
                         <div class="mb-3" id="card-element"></div>
@@ -47,6 +50,12 @@
                     </fieldset>
                 </form>
             </div>
+        </div>
+
+        <div class="button mt-5 mb-2">
+            <a href="{% url 'view_bag' %}">
+                <span>Edit Bag</span>
+            </a>
         </div>
 
 
