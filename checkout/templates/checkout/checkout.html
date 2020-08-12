@@ -64,7 +64,7 @@
                 <!--Checkout form -->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <!-- Customer detaisl fieldset -->
+                    <!-- Customer details fieldset -->
                     <fieldset>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
@@ -112,4 +112,8 @@
     </div>
 
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
 {% endblock %}
