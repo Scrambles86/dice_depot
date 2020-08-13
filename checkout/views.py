@@ -12,30 +12,38 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    bag = request.session.get('bag', {})
-    if not bag:
-        messages.error.request, "Your bag is empty"
-        return redirect(reverse('products'))
+    if request.method == 'POST':
+        bag = request.session.get('bag', {})
 
-    user_bag = bag_contents(request)
-    total = user_bag['grand_total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    stripe.PaymentIntent.create(
-        amount=stripe_total,
-        currency=settings.STRIPE_CURRENCY,
-    )
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+        }
+    else:
+        bag = request.session.get('bag', {})
+        if not bag:
+            messages.error.request, "Your bag is empty"
+            return redirect(reverse('products'))
 
-    order_form = OrderForm()
+        user_bag = bag_contents(request)
+        total = user_bag['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
 
-    if not stripe_public_key:
-        messages.warning(request, 'Stripe public key missing')
+        order_form = OrderForm()
 
-    template = 'checkout/checkout.html'
-    context = {
-        'order_form': order_form
-        'stripe_public_key': stripe_public_key,
-        'client_secret': client_secret,
-    }
+        if not stripe_public_key:
+            messages.warning(request, 'Stripe public key missing')
+
+        template = 'checkout/checkout.html'
+        context = {
+            'order_form': order_form
+            'stripe_public_key': stripe_public_key,
+            'client_secret': client_secret,
+        }
 
     return render(request, template, context)
