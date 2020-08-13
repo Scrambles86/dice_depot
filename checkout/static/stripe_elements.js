@@ -39,13 +39,12 @@ card.addEventListener('change', function (event) {
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
-    ev.preventDefault();
+ev.preventDefault();
+    card.update({ 'disabled': true});
+    $('#submit-button').attr('disabled', true);
     stripe.confirmCardPayment(clientsecret, {
         payment_method: {
             card: card,
-            billing_details: {
-                name: 'Jenny Rosen'
-            }
         }
     }).then(function(result) {
         if (result.error) {
