@@ -20,6 +20,11 @@ def checkout(request):
     user_bag = bag_contents(request)
     total = user_bag['grand_total']
     stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
 
     order_form = OrderForm()
     template = 'checkout/checkout.html'
