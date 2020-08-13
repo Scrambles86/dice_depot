@@ -18,3 +18,41 @@ card.addEventListener('change', function(event) {
         paymentError.textContent = '';
     }
 });
+
+// Handle realtime validation errors on the card element
+card.addEventListener('change', function (event) {
+    var errorDiv = document.getElementById('card-errors');
+    if (event.error) {
+        var html = `
+            <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
+        $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+});
+
+// Stripe Form Submit
+var form = document.getElementById('payment-form');
+
+form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    stripe.confirmCardPayment(clientsecret, {
+        payment_method: {
+            card: card,
+            billing_details: {
+                name: 'Jenny Rosen'
+            }
+        }
+    }).then(function(result) {
+        if (result.error) {
+            console.log(result.error.message);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+
+            }
+        }
+    });
