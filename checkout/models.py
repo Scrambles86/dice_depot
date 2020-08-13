@@ -34,7 +34,7 @@ class Order(models.Model):
         """
         Updates total in the event of the bag beign edited
         """
-        self.order_number = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_number = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
