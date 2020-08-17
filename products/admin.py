@@ -9,9 +9,13 @@ class ProductAdmin(admin.ModelAdmin):
         'year_published',
         'publishers',
         'price',
-        'image',
+        'image_url',
     )
 
-    ordering = ('sku',)
+    ordering = (
+        'name',
+    )
+
+    
 
 admin.site.register(Product, ProductAdmin)
