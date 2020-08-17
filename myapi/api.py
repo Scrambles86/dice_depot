@@ -1,6 +1,7 @@
 from django.db import models
 import requests
 import os
+import json
 
 ENDPOINT = os.environ.get('ENDPOINT')
 API_SECRET_KEY = os.environ.get('API_SECRET_KEY', '')
@@ -13,5 +14,6 @@ data = response.json()
 print(type(data))
 print(data)
 
-#for game in response.json()['games']:
-    
+out_file = open("products/fixtures/products.json", "w")
+
+json.dump(data, out_file)
