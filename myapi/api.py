@@ -8,6 +8,10 @@ API_CLIENT_ID = os.environ.get('API_CLIENT_ID', '')
 
 
 response = requests.get("https://api.boardgameatlas.com/api/search?client_id=yrOwuRj5mj")
+data = response.json()
 
-for game in response.json()['games']:
-    len()
+print(type(data))
+print(data)
+
+#for game in response.json()['games']:
+    
