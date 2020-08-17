@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from bag.contents import bag_contents
+#from bag.contents import bag_contents
 
 import stripe
 
@@ -61,12 +61,11 @@ def checkout(request):
         if not bag:
             messages.error(request, "Your bag is empty!")
             return redirect(reverse('products'))
-        }
-    else:
-        bag = request.session.get('bag', {})
-        if not bag:
-            messages.error.request, "Your bag is empty"
-            return redirect(reverse('products'))
+        else:
+            bag = request.session.get('bag', {})
+            if not bag:
+                messages.error.request, "Your bag is empty"
+                return redirect(reverse('products'))
 
         user_bag = bag_contents(request)
         total = user_bag['grand_total']
@@ -84,9 +83,9 @@ def checkout(request):
 
         template = 'checkout/checkout.html'
         context = {
-            'order_form': order_form
-            'stripe_public_key': stripe_public_key,
-            'client_secret': client_secret,
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
         }
 
     return render(request, template, context)
