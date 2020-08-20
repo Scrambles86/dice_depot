@@ -4,7 +4,7 @@ from django.db import models
 
 class Product(models.Model):
     name = models.CharField(max_length=60)
-    publishers = models.CharField(max_length=60)
+    primary_publisher = models.CharField(max_length=60)
     year_published = models.IntegerField()
     max_players = models.IntegerField()
     image_url = models.ImageField(upload_to="static/images")
