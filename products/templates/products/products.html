@@ -32,7 +32,20 @@
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer pt-0 border-0 text-left">
-                                    <div class="row"></div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-center del">£{{ product.publishers }}</p>
+                                        </div>
+                                        <div class="col">
+                                            <p class="lead mb-0 text-center del">£{{ product.year_published }}</p>
+                                        </div>
+                                        <div class="col">
+                                            <p class="lead mb-0 text-center del">£{{ product.msrp }}</p>
+                                        </div>
+                                        <div class="col">
+                                            <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
