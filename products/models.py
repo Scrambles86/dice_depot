@@ -9,7 +9,7 @@ class Product(models.Model):
     description = models.CharField(max_length=1024, null=True, blank=True)
     description_preview = models.CharField(max_length=512, null=True, blank=True)
     year_published = models.IntegerField()
-    min_age = models.IntegerField(null=True, default=0.0)
+    min_age = models.IntegerField()
     min_players = models.IntegerField(default=0.0)
     max_players = models.IntegerField(default=0.0)
     min_playtime = models.IntegerField(default=0.0)
