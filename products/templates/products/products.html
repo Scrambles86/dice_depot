@@ -14,10 +14,16 @@
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <select id="" class="">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="year_asc" {% if current_sorting == 'year_asc' %}selected{% endif %}>Release Year (low to high)</option>
+                                <option value="year_desc" {% if current_sorting == 'year_desc' %}selected{% endif %}>Release Year (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="age_asc" {% if current_sorting == 'age_asc' %}selected{% endif %}>Min. Age (A-Z)</option>
+                                <option value="age_desc" {% if current_sorting == 'age_desc' %}selected{% endif %}>Min. Age (Z-A)</option>
                             </select>
                         </div>
                     </div>
