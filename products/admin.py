@@ -5,6 +5,7 @@ from .models import Product
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'name',
         'year_published',
         'primary_publisher',
@@ -14,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = (
-        'name',
+        'id',
     )
 
     
