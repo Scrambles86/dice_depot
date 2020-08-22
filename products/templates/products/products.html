@@ -21,7 +21,7 @@
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="">
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img src="{{ product.image_url.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="">
@@ -29,7 +29,7 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <h3 class="mb-0">{{ product.name }}</h3>
                                 </div>
                                 <div class="card-footer pt-0 border-0 text-left">
                                     <div class="row">
@@ -40,10 +40,10 @@
                                             <p class="lead mb-0 text-center">{{ product.year_published }}</p>
                                         </div>
                                         <div class="col">
-                                            <p class="lead mb-0 text-center del">£{{ product.msrp }}</p>
+                                            <p class="lead mb-0 text-center">RRP : <del>£{{ product.msrp }}</del></p>
                                         </div>
                                         <div class="col">
-                                            <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
+                                            <p class="lead mb-0 text-center font-weight-bold">Our Price : £{{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
