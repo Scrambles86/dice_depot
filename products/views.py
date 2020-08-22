@@ -9,8 +9,20 @@ def all_products(request):
     """ View that displays all available games from the json file """
 
     products = Product.objects.all()
+    query = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = prodcuts.annotate(lower_name=Lower('name'))
+                
+            if 'direction' in request.GET:
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
