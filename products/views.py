@@ -17,6 +17,8 @@ def all_products(request):
                 messages.error(request, "You need to type something first!")
                 return redirect(reverse('products'))
 
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
     context = {
         'products': products,
     }
