@@ -47,6 +47,14 @@
                                 <a href="{% url 'order_history' order.order_number %}">{{ order.order_number }}</a>
                             </td>
                             <td>{{ order.date }}</td>
+                            <td>
+                                <ul>
+                                {% for item in order.lineitems.all %}
+                                    <li>
+                                        {{} item.product.name }} x{{ item.quantity }}
+                                    </li>
+                                </ul>
+                            </td>
                             <td>{{ order.grand_total }}</td>
                         </tr>
                     {% endfor %}
