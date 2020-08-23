@@ -28,7 +28,32 @@
             <button class="rounded-0 float-right">Update Info</button>
         </form>
     </div>
-    <div class="col-12 col-lg-6"></div>
+    <div class="col-12 col-lg-6">
+        <p>Past Orders</p>
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Order Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'order_history' order.order_number %}">{{ order.order_number }}</a>
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td>{{ order.grand_total }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
     {{ profile }}
 {% endblock %}
