@@ -26,3 +26,21 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+def past_orders(request, order_number):
+    """
+    Returns past orders for the user
+    """
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'A confirmation number for order {order_number} was sent on the order date'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
