@@ -13,12 +13,23 @@
 
 {% block content %}
 <div class="container header-container">
-        <div class="row">
-            <div class="col">
-                <h2>My Profile</h2>
-            </div>
+    <div class="row">
+        <div class="col">
+            <h2>My Profile</h2>
         </div>
     </div>
+</div>
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <p>Delivery Details</p>
+        <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-form">
+            {% csrf token %}
+            {{ form|crispy }}
+            <button class="rounded-0 float-right">Update Info</button>
+        </form>
+    </div>
+    <div class="col-12 col-lg-6"></div>
+</div>
     {{ profile }}
 {% endblock %}
 
