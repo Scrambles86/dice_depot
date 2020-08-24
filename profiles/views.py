@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
 from .models import UserProfile
-from .forms import UserProfileForm
+from .forms import ProfileForm
 
 # Create your views here.
 
@@ -11,12 +11,12 @@ def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
+        form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile info updated')
 
-    form = UserProfileForm(UserProfile, user=request.user)
+    form = ProfileForm(UserProfile, user=request.user)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'

@@ -8,5 +8,17 @@
 
 {% block content %}
  
- <div class="container main-container h-50 my-5"></div>
+ <div class="container main-container h-50 my-5">
+ <div class="row">
+    <div class="col-12 col-lg-6">
+        <p>Sell Your Games</p>
+        <form class="mt-3" action="" method="POST" id="sell-form">
+            {% csrf token %}
+            {{ form|crispy }}
+            <button class="rounded-0 float-right">Get Quote</button>
+        </form>
+    </div>
+    
+  </div>
+  </div>
 {% endblock %}
