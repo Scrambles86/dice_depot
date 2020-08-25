@@ -36,7 +36,7 @@ data = response.json()
 print(type(data))
 print(data)
 
-out_file = open("products/fixtures/products.json", "w")
+out_file = open("products/fixtures/products_full.json", "w")
 
 json.dump(data, out_file)
 
