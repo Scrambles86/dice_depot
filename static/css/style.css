@@ -22,7 +22,7 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-    color: #6F732F;
+    color: #264027;
 }
 
 .btn-main {
@@ -50,7 +50,7 @@ body {
 
 .card-style {
     padding: 60px 0px;
-    background-color: #B38A58;
+    background-color: #264027;
 }
 
 /* ------------- Navbar Styling */
