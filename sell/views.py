@@ -10,7 +10,7 @@ from products.models import UserProfile
 # Create your views here.
 
 class SellFormView(FormView):
-    model = sellGame
+    model = Game
     form_class = SaleForm
     template_name = 'sell/sell.html'
 
