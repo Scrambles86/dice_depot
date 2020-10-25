@@ -11,5 +11,5 @@ GAME_CONDITION = (
 
 class Game(models.Model):
     game_name = models.CharField(max_length=254, blank=False)
-    sealed = models.BooleanField(label="Tick if sealed", help_text="Only tick this box if your game is still contained in it's original wrapping")
-    condition = models.CharField(max_length=8, option=GAME_CONDITION, default='good')
+    sealed = models.BooleanField(help_text="Only tick this box if your game is still contained in it's original wrapping")
+    condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')

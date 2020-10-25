@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import FormView
 from django.db import models
-from . models import sellGame
+from .models import Game
 from .forms import SaleForm
 
 from products.models import UserProfile
