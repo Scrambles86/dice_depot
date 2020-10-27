@@ -56,4 +56,4 @@ def product_description(request):
         'products': product,
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/product_description.html', context)
