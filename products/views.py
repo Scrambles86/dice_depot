@@ -47,8 +47,8 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-def product_description(request):
-    """ View that displays all available games from the json file """
+def product_description(request, product_id):
+    """ View that displays the details for a single product """
 
     products = get_object_or_404(Product, pk=product_id)
 
