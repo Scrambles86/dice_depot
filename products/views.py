@@ -53,7 +53,7 @@ def product_description(request, product_id):
     products = get_object_or_404(Product, pk=product_id)
 
     context = {
-        'products': Product,
+        'products': products,
     }
 
     return render(request, 'products/product_description.html', context)
