@@ -6,7 +6,7 @@ body {
     background: url('/media/dice.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #264027;
+    color: #f5cb42;
     font-family: 'Spectral SC', serif;
 }
 
@@ -22,7 +22,7 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-    color: #264027;
+    color: #ffffff;
 }
 
 .btn-main {

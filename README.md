@@ -84,7 +84,7 @@ the right hand side, in order to keep the front page minimalist, but to still im
 <p>Similarly to the background image, I wanted the colour scheme to be fun, but not too busy.</p>
 
 <ul>
-    <li>Primary Colour : #264027; "Phthalo Green" - A forest green for the navbar that isn't too bright to look at and contrasts well with the main site image</li>
+    <li>Primary Colour : #f5cb42; "" - A royal Gold that contrasts well with the main site image and evokes a color scheme found in many available games</li>
     <li>Secondary Colour : #6F732F; "Spanish Bistro" - A variant in the Phthalo Green palette that ebbs slightly towards yellow. Again, a bright colour but one that is easy on the eyes.</li>
     <li>Tertiary Colour : #B38A58; "Camel" - A calm yellow used for highliting agaisnt the green background whilst still blending somewhat.</li>
     <li>White Colour : #ffffff; "White" - Shows up well against the Phthalo Green</li>

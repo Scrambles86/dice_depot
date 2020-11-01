@@ -13,3 +13,6 @@ class Game(models.Model):
     game_name = models.CharField(max_length=254, blank=False)
     sealed = models.BooleanField(help_text="Only tick this box if your game is still contained in it's original wrapping")
     condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
+
+    def __str__(self):
+        return self.name

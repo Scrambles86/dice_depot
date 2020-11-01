@@ -17,7 +17,5 @@ class SellFormView(FormView):
 
 def sell(request):
     """ Renders sell page """
-   
-
     return render(request, 'sell/sell.html')
 
