@@ -4,8 +4,6 @@ from django.db import models
 from .models import Game
 from .forms import SaleForm
 
-from products.models import UserProfile
-
 
 # Create your views here.
 
