@@ -40,9 +40,9 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-            for item_id, item_data in bag.items():
+            for product_id, item_data in bag.items():
                 try:
-                    product = Product.objects.get(id=item_id)
+                    product = Product.objects.get(id=product_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
