@@ -5,8 +5,8 @@
                 All Games
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'all_products' %}?sort=name&direction=desc" class="dropdown-item">Sort A-Z</a>
-                <a href="{% url 'all_products' %}?sort=name&direction=asc" class="dropdown-item">Sort Z-A</a>
+                <a href="{% url 'all_products' %}?sort=name&direction=asc" class="dropdown-item">Sort A-Z</a>
+                <a href="{% url 'all_products' %}?sort=name&direction=desc" class="dropdown-item">Sort Z-A</a>
                 <a href="{% url 'all_products' %}?sort=price&direction=asc" class="dropdown-item">Sort By Price (Low To High)</a>
                 <a href="{% url 'all_products' %}?sort=price&direction=desc" class="dropdown-item">Sort By Price (High To Low)</a>
                 <a href="{% url 'all_products' %}?sort=year_published&direction=asc" class="dropdown-item">Sort By Release Year (Oldest To Newest)</a>
