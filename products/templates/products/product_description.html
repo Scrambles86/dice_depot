@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                        <a href="{% url 'product_description' product.id %}">
+                        <a href="{% url 'product_description' products.id %}">
                                     <img class="img-fluid card-img-top" src="{{ product.image_url }}" alt="{{ product.name }}">
                                 </a>
                 </div>
@@ -35,7 +35,7 @@
                                 <p class="mt-3">Quantity:</p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
-                                        <input class="form-control qty_input" type="number" value="1" min="1" max="99" data-product_id="{{ products.id }}" id="id_qty_{{ products.id }}">
+                                        <input class="form-control qty_input" name = "quantity" type="number" value="1" min="1" max="99" data-product_id="{{ products.id }}" id="id_qty_{{ products.id }}">
                                     </div>
                                 </div>
                             </div>
