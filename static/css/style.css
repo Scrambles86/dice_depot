@@ -50,6 +50,13 @@ body {
     padding: 60px 0px;
     background-color: #264027;
     border: 5px solid #000000;
+    
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
 
 /* ------------- Navbar Styling */
