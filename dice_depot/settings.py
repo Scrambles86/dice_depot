@@ -189,3 +189,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # Emails
 DEFAULT_FROM_EMAIL = 'dicedepot@dicedepot.com'
+
+# Delivery Costs
+
+DEFAULT_DELIVERY_PERCENTAGE = '10'
