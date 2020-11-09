@@ -1,0 +1,779 @@
+[{
+		"model": "products.players",
+		"pk": 1,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 2,
+		"fields": {
+			"sku": "yqR4PtpO8X",
+			"name": "Scythe",
+			"year_published": 2016,
+			"min_players": 1,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 3,
+		"fields": {
+            "min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 4,
+		"fields": {"min_players": 1,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 5,
+		"fields": {
+			"min_players": 1,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 6,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 7,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 8,
+		"fields": {
+			"min_players": 1,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 9,
+		"fields": {
+			"min_players": 2,
+			"max_players": 8
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 10,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 11,
+		"fields": {
+			"min_players": 2,
+			"max_players": 7
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 12,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 13,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 14,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 15,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 16,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 16,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 17,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 18,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 19,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 20,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 21,
+		"fields": {
+			"min_players": 3,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 22,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 23,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 24,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 25,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 26,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 27,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 28,
+		"fields": {
+			"min_players": 2,
+			"max_players": 6
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 29,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+        }
+	},
+	{
+		"model": "products.players",
+		"pk": 30,
+		"fields": {
+			"min_players": 1,
+			"max_players": 100
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 31,
+		"fields": {
+			"min_players": 1,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 32,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 33,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 34,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 35,
+		"fields": {
+			"min_players": 1,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 36,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 37,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 38,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 39,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 40,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 41,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 42,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 43,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 44,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 45,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 46,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 47,
+		"fields": {
+			"min_players": 2,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 48,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 49,
+		"fields": {
+			"min_players": 2,
+			"max_players": 8
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 50,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 51,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 52,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 53,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 54,
+		"fields": {
+			"min_players": 2,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 55,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 56,
+		"fields": {
+			"min_players": 3,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 57,
+		"fields": {
+			"min_players": 3,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 58,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 59,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 60,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 61,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 62,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 63,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 64,
+		"fields": {
+			"min_players": 5,
+			"max_players": 10
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 65,
+		"fields": {
+			"min_players": 3,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 66,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 67,
+		"fields": {
+			"min_players": 2,
+			"max_players": 7
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 68,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 69,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 70,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 71,
+		"fields": {
+			"min_players": 1,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 72,
+		"fields": {
+			"min_players": 2,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 73,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 74,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 75,
+		"fields": {
+			"min_players": 1,
+			"max_players": 7
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 76,
+		"fields": {
+			"min_players": 3,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 77,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 78,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 79,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 80,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 81,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 82,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 83,
+		"fields": {
+			"min_players": 2,
+			"max_players": 5
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 84,
+		"fields": {
+			"min_players": 3,
+			"max_players": 6
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 85,
+		"fields": {
+			"min_players": 2,
+			"max_players": 8
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 86,
+		"fields": {
+			"min_players": 5,
+			"max_players": 10
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 87,
+		"fields": {
+			"min_players": 3,
+			"max_players": 10
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 88,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 89,
+		"fields": {
+			"min_players": 4,
+			"max_players": 12
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 90,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 91,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 92,
+		"fields": {
+			"min_players": 1,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 93,
+		"fields": {
+			"min_players": 1,
+			"max_players": 8
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 94,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.players",
+		"pk": 95,
+		"fields": {
+			"min_players": 2,
+			"max_players": 4
+		}
+	},
+	{
+		"model": "products.product",
+		"pk": 96,
+		"fields": {
+			"min_players": 2,
+			"max_players": 2
+		}
+	}
+]
