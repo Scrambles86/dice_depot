@@ -1,0 +1,680 @@
+[{
+		"model": "products.age",
+		"pk": 1,
+		"fields": {
+			"min_age": 12,
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 2,
+		"fields": {
+			"min_age": 14,
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 3,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 4,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 5,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 6,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 7,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 8,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 9,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 10,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 11,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 12,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 13,
+		"fields": {
+			"min_age": 7
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 14,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 15,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 16,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 16,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 17,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 18,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 19,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 20,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 21,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 22,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 23,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 24,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 25,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 26,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 27,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 28,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 29,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 30,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 31,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 32,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 33,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 34,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 35,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 36,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 37,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 38,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 39,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 40,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 41,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 42,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 43,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 44,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 45,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 46,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 47,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 48,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 49,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 50,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 51,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 52,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 53,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 54,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 55,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 56,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 57,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 58,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 59,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 60,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 61,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 62,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 63,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 64,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 65,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 66,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 67,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 68,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 69,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 70,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 71,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 72,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 73,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 74,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 75,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 76,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 77,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 78,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 79,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 80,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 81,
+		"fields": {
+			"min_age": 10
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 82,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 83,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 84,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 85,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 86,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 87,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 88,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 89,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 90,
+		"fields": {
+			"min_age": 8
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 91,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 92,
+		"fields": {
+			"min_age": 13
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 93,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 94,
+		"fields": {
+			"min_age": 12
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 95,
+		"fields": {
+			"min_age": 14
+		}
+	},
+	{
+		"model": "products.age",
+		"pk": 96,
+		"fields": {
+			"min_age": 14
+		}
+	}
+]
