@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product
+from .models import Product, Age, Players
 
 # Create your views here.
 
@@ -51,9 +51,13 @@ def product_description(request, product_id):
     """ View that displays the details for a single product """
 
     products = get_object_or_404(Product, pk=product_id)
+    age = Age.objects.all()
+    players = Players.objects.all()
 
     context = {
         'products': products,
+        'age': age,
+        'players': players,
     }
 
     return render(request, 'products/product_description.html', context)
