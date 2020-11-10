@@ -51,13 +51,9 @@ def product_description(request, product_id):
     """ View that displays the details for a single product """
 
     products = get_object_or_404(Product, pk=product_id)
-    age = Age.objects.all()
-    players = Players.objects.all()
 
     context = {
         'products': products,
-        'age': age,
-        'players': players,
     }
 
     return render(request, 'products/product_description.html', context)
