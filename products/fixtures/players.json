@@ -10,9 +10,6 @@
 		"model": "products.players",
 		"pk": 2,
 		"fields": {
-			"sku": "yqR4PtpO8X",
-			"name": "Scythe",
-			"year_published": 2016,
 			"min_players": 1,
 			"max_players": 5
 		}
@@ -21,14 +18,15 @@
 		"model": "products.players",
 		"pk": 3,
 		"fields": {
-            "min_players": 2,
+			"min_players": 2,
 			"max_players": 4
 		}
 	},
 	{
 		"model": "products.players",
 		"pk": 4,
-		"fields": {"min_players": 1,
+		"fields": {
+			"min_players": 1,
 			"max_players": 5
 		}
 	},
@@ -70,7 +68,7 @@
 		"fields": {
 			"min_players": 2,
 			"max_players": 8
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -94,7 +92,7 @@
 		"fields": {
 			"min_players": 2,
 			"max_players": 4
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -142,7 +140,7 @@
 		"fields": {
 			"min_players": 2,
 			"max_players": 5
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -198,7 +196,7 @@
 		"fields": {
 			"min_players": 1,
 			"max_players": 4
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -222,7 +220,7 @@
 		"fields": {
 			"min_players": 2,
 			"max_players": 2
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -230,7 +228,7 @@
 		"fields": {
 			"min_players": 2,
 			"max_players": 6
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -238,7 +236,7 @@
 		"fields": {
 			"min_players": 2,
 			"max_players": 4
-        }
+		}
 	},
 	{
 		"model": "products.players",
@@ -769,7 +767,7 @@
 		}
 	},
 	{
-		"model": "products.product",
+		"model": "products.players",
 		"pk": 96,
 		"fields": {
 			"min_players": 2,

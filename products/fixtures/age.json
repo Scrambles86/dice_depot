@@ -2,14 +2,14 @@
 		"model": "products.age",
 		"pk": 1,
 		"fields": {
-			"min_age": 12,
+			"min_age": 12
 		}
 	},
 	{
 		"model": "products.age",
 		"pk": 2,
 		"fields": {
-			"min_age": 14,
+			"min_age": 14
 		}
 	},
 	{
