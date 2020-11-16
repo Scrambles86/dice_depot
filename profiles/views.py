@@ -4,6 +4,8 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import ProfileForm
 
+from checkout.models import Order
+
 # Create your views here.
 
 def profile(request):
@@ -22,7 +24,8 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'orders': orders
+        'orders': orders,
+        'on_profile_page': True
     }
 
     return render(request, template, context)

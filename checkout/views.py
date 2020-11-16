@@ -81,6 +81,21 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user_email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+
         order_form = OrderForm()
 
         if not stripe_public_key:
@@ -119,6 +134,9 @@ def checkout_confirm(request, order_number):
             'default_street_address2': order.street_address_2,
             'default_county': order.county,
         }
+        profile_form = ProfileForm(profile_data, instance=profile)
+        if profile_form.is_valid():
+            profile_form.save()
 
     messages.success(request, f'Order confirmed! \
         Your order number is {order_number}. We will email this \
