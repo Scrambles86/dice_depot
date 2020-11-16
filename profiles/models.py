@@ -9,7 +9,7 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     """
-    Model to store the order history and delivery data 
+    Model to store the order history and delivery data
     for a user for repeat transactions
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -16,7 +16,7 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile info updated')
 
-    form = ProfileForm(UserProfile, user=request.user)
+    form = ProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
