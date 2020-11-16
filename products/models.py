@@ -26,10 +26,10 @@ class Players(models.Model):
     max_players = models.IntegerField(default=0.0)
 
     def __str__(self):
-        return "%s %s" % (self.min_players, self.max_players)
+        return str("%s %s" % (self.min_players, self.max_players))
 
 class Age(models.Model):
     min_age = models.IntegerField()
 
     def __str__(self):
-        return self.min_age
+        return str(self.min_age)

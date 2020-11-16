@@ -14,7 +14,7 @@ def add_item(request, product_id):
     Add game to bag in chosen quantity
     """
 
-    product = Product.objects.get(pk=item_id)
+    product = Product.objects.get(pk=product_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
