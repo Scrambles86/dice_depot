@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 
 from products.models import Product
@@ -14,7 +14,7 @@ def add_item(request, product_id):
     Add game to bag in chosen quantity
     """
 
-    product = Product.objects.get(pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
@@ -25,6 +25,5 @@ def add_item(request, product_id):
         bag[product_id] = quantity
         messages.success(request, f'Added {product.name} to your bag')
 
-    request.session['bag'] = bag
+    request.session['bag'] = bag 
     return redirect(redirect_url)
-

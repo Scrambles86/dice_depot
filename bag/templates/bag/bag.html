@@ -44,7 +44,7 @@
                                         <p class="my-0">{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        <p class="my-0">{{ item.product.quantity }}</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">{{ item.product.price }}</p>
@@ -60,7 +60,7 @@
                                         </tr>
                                     <tr>
                                         <td colspan="5" class="text-right">
-                                            <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+                                            <a href="{% url 'all_products' %}" class="btn rounded-0 btn-lg">
                                                 <span class="icon">
                                                     <i class="fas fa-chevron-left"></i>
                                                 </span>
@@ -75,7 +75,6 @@
                                         </td>
                                     </tr>
                                 </table>
-                                {{ bag_items }}
                             </div>
                         {% else %}
                             <p class="lead mb-5">Your shopping cart is empty!</p>
