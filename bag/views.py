@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 from products.models import Product
@@ -37,9 +37,9 @@ def edit_bag(request, product_id):
     bag = request.session.get('bag', {})
 
     if quantity > 0:
-        bag[item_id] = quantity
+        bag[product_id] = quantity
     else:
-        bag.pop[item_id]
+        bag.pop[product_id]
 
-    request.session['bag'] = bag 
-    return redirect(redirect_url)
+    request.session['bag'] = bag
+    return redirect(reverse, ('view_bag'))
