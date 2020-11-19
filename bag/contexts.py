@@ -8,7 +8,6 @@ def bag_contents(request):
     bag_items = []
     total = 0
     product_count = 0
-    delivery = total * Decimal(settings.DEFAULT_DELIVERY_PERCENTAGE / 100)
     bag = request.session.get('bag', {})
 
     for product_id, quantity in bag.items():
@@ -21,6 +20,7 @@ def bag_contents(request):
             'product': product,
         })
 
+    delivery = total * Decimal(settings.DEFAULT_DELIVERY_PERCENTAGE / 100)
     grand_total = delivery + total
 
     context = {
