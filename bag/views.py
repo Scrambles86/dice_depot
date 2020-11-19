@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 
 from products.models import Product
@@ -30,7 +30,7 @@ def add_item(request, product_id):
 
 def edit_bag(request, product_id):
     """
-    Add game to bag in chosen quantity
+    Amend game quantity in bag
     """
 
     quantity = int(request.POST.get('quantity'))
@@ -39,7 +39,19 @@ def edit_bag(request, product_id):
     if quantity > 0:
         bag[product_id] = quantity
     else:
-        bag.pop[product_id]
+        bag.pop(product_id)
 
     request.session['bag'] = bag
     return redirect(reverse, ('view_bag'))
+
+def remove_from_bag(request, product_id):
+    """
+    Delete game from bag
+    """
+
+    bag = request.session.get('bag', {})
+
+    bag.pop(product_id)
+
+    request.session['bag'] = bag
+    return HttpResponse(status=200)
