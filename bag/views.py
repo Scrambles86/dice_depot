@@ -27,3 +27,19 @@ def add_item(request, product_id):
 
     request.session['bag'] = bag 
     return redirect(redirect_url)
+
+def edit_bag(request, product_id):
+    """
+    Add game to bag in chosen quantity
+    """
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[item_id] = quantity
+    else:
+        bag.pop[item_id]
+
+    request.session['bag'] = bag 
+    return redirect(redirect_url)
