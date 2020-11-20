@@ -11,6 +11,7 @@ from profiles.models import UserProfile
 from bag.contexts import bag_contents
 
 import stripe
+import json
 
 
 def checkout(request):
@@ -76,7 +77,7 @@ def checkout(request):
         total = user_bag['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
-        stripe.PaymentIntent.create(
+        intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
