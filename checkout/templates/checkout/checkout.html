@@ -87,7 +87,7 @@
                     </fieldset>
                     <!-- Seperate fieldset for payment details -->
                     <fieldset class="px-3">
-                        <legend class="small text-black px-2 w-auto">Payment Details</legend>
+                        <legend class="px-2 float-left w-auto">Payment Details</legend>
                         <div class="mb-3" id="card-element"></div>
                         <div class="mb-3" id="payment-failed"></div>
                     </fieldset>
@@ -117,5 +117,5 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/static/stripe_elements.js' %}"></script>
+    <script src="{% static 'stripe_elements.js' %}"></script>
 {% endblock %}
