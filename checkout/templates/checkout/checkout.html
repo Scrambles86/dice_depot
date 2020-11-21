@@ -8,17 +8,19 @@
             <div class="col"></div>
         </div>
     </div>
+{% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'static/css/checkout.css' %}"    
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
         <div class="row">
 
             <div class="row">
             <div class="col-12 col-lg-6  mb-5">
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
-                <div class="row">
+                <p>Order Summary ({{ product_count }})</p>
+                <div class="row"> 
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0">Item</p>
                     </div>
@@ -29,9 +31,9 @@
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                            <a href="{% url 'product_description' item.product.id %}">
                                 {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                    <img class="w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
                                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 {% endif %}
