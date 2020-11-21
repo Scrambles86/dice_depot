@@ -15,17 +15,13 @@
 {% endblock %}
 
 {% block content %}
-        <div class="row">
-
-            <div class="row">
-            <div class="col-12 col-lg-6  mb-5">
-                <p>Order Summary ({{ product_count }})</p>
+    <div class="container"> 
+        <div class="row text-center card-body">
+            <div class="col-12 col-lg-6 mb-5">
+                <h1 class="text-center">Order Summary ({{ product_count }})</h1>
                 <div class="row"> 
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0">Item</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0">Subtotal</p>
+                        <p class="mb-1 mt-0">Item(s)</p>
                     </div>
                 </div>
                 {% for item in bag_items %}
@@ -33,23 +29,20 @@
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_description' item.product.id %}">
                                 {% if item.product.image %}
-                                    <img class="w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="w-100" src="{{ product.image_url }}" alt="{{ product.name }}">
                                 {% else %}
                                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 {% endif %}
                             </a>
                         </div>
-                        <div class="col-7">
+                        <div class="col-7 text-center">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p>Qty: {{ item.quantity }}</p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p>Qty: <strong>{{ item.quantity }}</strong></p>
                         </div>
                     </div>
                 {% endfor %}
                 <hr>
-                <div class="row text-right">
+                <div class="row text-center">
                     <div class="col-7">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Grand Total:</p>
@@ -59,6 +52,8 @@
                         <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
+            </div>
+        </div>
                 
                 
             <div class="col-12 col-lg-6">
@@ -97,13 +92,14 @@
                         <div class="mb-3" id="payment-failed"></div>
                     </fieldset>
                 </form>
+            </div>
             
 
-        <div class="button mt-5 mb-2">
+        <div class="button mt-5 mb-2 text-center">
             <a href="{% url 'view_bag' %}">
-                <span>Edit Bag</span>
+                <span class="btn-primary btn-lg">Edit Bag</span>
             </a>
-            <button id="submit-button">
+            <button class="btn-success btn-lg" id="submit-button">
                 <span>Confirm Order</span>
             </button>
             <p class="my-0">
@@ -111,6 +107,7 @@
             </p>
             </div>
         </div>
+    </div>
     </div>
 
 
