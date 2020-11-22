@@ -16,15 +16,6 @@ class StripeWebhook:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self, order):
-        cust_email = order.email
-        subject = render_to_string(
-            'checkout/emails/checkout_email_subject.txt',
-            {'order': order})
-        body = render_to_string(
-            'checkout/emails/checkout_email_body.txt',
-            {'order': order})
-
     def confirm_order(self, order):
         """
         Sends out confirmation email on completion of order
@@ -111,6 +102,7 @@ class StripeWebhook:
                 attempt += 1
                 time.sleep(1)
             if order_exists:
+                self._send_confirmation_email(order)
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | Order verified in database',
                     status=200)
@@ -144,6 +136,7 @@ class StripeWebhook:
                     if order:
                         order.delete()
                     return HttpResponse(content=f'Webhook received: {event["type"]} | Error: {e}', status = 500)
+                    self._send_confirmation_email(order)
             return HttpResponse( 
                 content=f'Webhook received: {event["type"]} | Order created succesfully',
                 status=200)
