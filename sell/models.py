@@ -14,6 +14,7 @@ class Game(models.Model):
     model_pic = models.ImageField(upload_to = 'user_game_images/', default = '')
     sealed = models.BooleanField(help_text="Only tick this box if your game is still contained in it's original wrapping")
     condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
+    game_description = models.TextField(null=False, blank=False)
 
     def __str__(self):
         return self.game_name
