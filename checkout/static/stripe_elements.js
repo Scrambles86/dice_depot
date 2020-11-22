@@ -42,10 +42,21 @@ card.addEventListener('change', function (event) {
 let form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
-ev.preventDefault();
+    ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
-    stripe.confirmCardPayment(clientSecret, {
+
+    let saveInfo = Boolean($('#id-save-info').attr('checked'));
+    let csrfToken = $('input[name="csrfmiddlewaretoken"').val();
+    let postData = {
+        'csrfmiddlewaretoken' : csrfToken,
+        'client_secret' : clientSecret,
+        'save_info' : saveInfo,
+    };
+    let url = '/checkout/cache_checkout_data/';
+
+    $.post(url, postData).done(function () {
+        stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
             billing_details: {
@@ -73,8 +84,9 @@ ev.preventDefault();
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
                     state: $.trim(form.county.value),
+                }
+            }
         }
-    }
     }).then(function(result) {
         if (result.error) {
             let errorDiv = document.getElementById('card-errors');
@@ -83,13 +95,17 @@ ev.preventDefault();
                 <i class="fas fa-times"></i>
             </span>
             <span>${result.error.message}</span>
-        `;
-        $(errorDiv).html(html);
-        card.update({ 'disabled': false});
-        $('#submit-button').attr('disabled', true);
+            `;
+            $(errorDiv).html(html);
+            card.update({ 'disabled': false});
+            $('#submit-button').attr('disabled', true);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
             }
         }
-    };
+    })  
+    }).fail(function () {
+        location.reload();
+    })
+});
