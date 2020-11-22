@@ -1,0 +1,19 @@
+Hi there {{ order.full_name }}
+
+Thanks for ordering from The Dice Depot on {{ order.date }}! Your order is confirmed and will be shipped to you shortly.
+
+Order Number = {{ order._order_number }}
+
+Order Total = {{ order._order_total }}
+Delivery Total = {{ order._delivery_cost }}
+Final Total = {{ order._grand_total }}
+
+Shipping to {{ order.street_address1 }} in {{ order.town_or_city }}, {{order.county }}
+
+If there are any issues, please feel free to contact us at {{ contact_email }}
+
+Thanks again, and happy gaming!
+
+Sincerely,
+
+The Dice Depot
