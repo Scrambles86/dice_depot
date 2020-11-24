@@ -21,7 +21,7 @@ def sell(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Game details received - we will email you with an offer once we have reviewed your product')
-        else : 
+        else: 
             messages.error(request, 'Please ensure all fields are filled out correctly')
     else:
         form = SaleForm()
