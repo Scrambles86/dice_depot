@@ -17,8 +17,11 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile info updated')
+        else:
+            messages.error(request, 'Something went wrong - please ensure all the fields are valid')
+    else:
+        form = ProfileForm(instance=profile)
 
-    form = ProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
