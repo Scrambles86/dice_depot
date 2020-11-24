@@ -15,7 +15,7 @@ class Game(models.Model):
     sealed = models.BooleanField(help_text="Only tick this box if your game is still contained in it's original wrapping")
     condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
     game_description = models.TextField(max_length=512, help_text="Please provide a quick description of your game's quality", null=True, blank=True)
-    email = models.EmailField(max_length=254, null=False, blank=False)
+    #email = models.EmailField(max_length=254, null=False, blank=False)
 
     def __str__(self):
         return self.game_name
