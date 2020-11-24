@@ -27,7 +27,6 @@ def sell(request):
         form = SaleForm()
         context = {
         "form": form,
-    }
+        }
 
     return render(request, template, context)
-

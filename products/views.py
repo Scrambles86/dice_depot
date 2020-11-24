@@ -63,7 +63,7 @@ def product_description(request, product_id):
 def add_product(request):
     form = ProductForm()
     template = 'products/add_product.html'
-    context: {
+    context = {
         'form': form,
     }
 
