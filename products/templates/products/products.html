@@ -40,6 +40,16 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-center font-weight-bold">Our Price : £{{ product.price }}</p>
                                         </div>
+                                        {% if request.user.is_superuser %}
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
