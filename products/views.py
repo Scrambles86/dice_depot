@@ -63,12 +63,10 @@ def product_description(request, product_id):
 def add_product(request):
     form = ProductForm()
     template = 'products/add_product.html'
-    context : {
+    context: {
         'form': form,
     }
 
-<<<<<<< HEAD
-    return render(request, template)
-=======
     return render(request, template, context)
->>>>>>> 8e2c39a2d75cbabb3131d0885eacd4148a3b8b50
+
+

@@ -3,7 +3,6 @@
 
 {% block page_header %}
 
-
 {% endblock %}
 
 {% block content %}
@@ -15,7 +14,7 @@
         <form action="{% url 'sell' %}" method="POST">
         {% csrf_token %}
         {{ form|crispy }}
-        <input type="submit" value="create">
+        <input type="submit" value="Get An Offer">
         </form>
     </div>
     

@@ -7,6 +7,8 @@ class SaleForm(forms.ModelForm):
         model = Game
         fields = [
             'game_name',
+            'game_description',
+            'model_pic',
             'sealed',
             'condition',
         ]
