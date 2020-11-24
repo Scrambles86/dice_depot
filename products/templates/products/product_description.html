@@ -22,6 +22,17 @@
                     <p class="mt-3">Released : {{ products.year_published }}</p>
                     <p class="mt-3">Number Of Players : {{ products.players.min_players }} to {{ products.players.max_players }}</p>
 
+                    {% if request.user.is_superuser %}
+                        <div class="row">
+                            <div class="col">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'delete_product' product.id %}">Delete</a>
+                            </div>
+                        </div>
+                    {% endif %}
+
                     <form class="form" action="{% url 'add_item' products.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
