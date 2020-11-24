@@ -7,13 +7,15 @@ from .forms import SaleForm
 
 # Create your views here.
 
-class SellFormView(FormView):
-    model = Game
-    form_class = SaleForm
-    template_name = 'sell/sell.html'
-
+form = SaleForm()
 
 def sell(request):
     """ Renders sell page """
-    return render(request, 'sell/sell.html')
+
+    template =  'sell/sell.html'
+    context = {
+        "form": form 
+    }
+
+    return render(request, template, context)
 

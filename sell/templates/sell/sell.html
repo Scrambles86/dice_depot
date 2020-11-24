@@ -12,7 +12,7 @@
  <div class="row">
     <div class="col-12 col-lg-6">
         <p>Sell Your Games</p>
-        <form action="" method="POST">
+        <form action="{% url 'sell' %}" method="POST">
         {% csrf_token %}
         {{ form|crispy }}
         <input type="submit" value="create">
