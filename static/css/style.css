@@ -59,6 +59,12 @@ body {
     object-fit: cover;
 }
 
+/* ------------- Product Styling */
+
+.product-details-container {
+    text-align: center;
+}
+
 /*-------------- Toasts Styling */
 
 .message-container {
