@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4kk8s$^9t-pu&3wmomxu$)(8(pe&mjuv)8awn0__-k%17yzhae'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # API 
 ENDPOINT = os.environ.get('ENDPOINT', '')
@@ -29,7 +29,7 @@ API_SECRET_KEY = os.environ.get('API_SECRET_KEY', '')
 API_CLIENT_ID = os.environ.get('API_CLIENT_ID', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['scrambles86-dice-depot.herokuapp.com', 'localhost']
 
