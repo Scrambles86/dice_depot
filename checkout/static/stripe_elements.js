@@ -45,6 +45,7 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
 
     let saveInfo = Boolean($('#id-save-info').attr('checked'));
     let csrfToken = $('input[name="csrfmiddlewaretoken"').val();

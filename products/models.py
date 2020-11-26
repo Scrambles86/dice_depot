@@ -7,7 +7,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     primary_publisher = models.CharField(max_length=60)
     description = models.CharField(max_length=1024, null=True, blank=True)
-    description_preview = models.CharField(max_length=512, null=True, blank=True)
+    description_preview = models.CharField(max_length=1024, null=True, blank=True)
     year_published = models.IntegerField()
     players = models.ForeignKey('Players', null=True, on_delete=models.CASCADE)
     age = models.ForeignKey('Age', null=True, on_delete=models.CASCADE)
