@@ -20,7 +20,6 @@ games, and also aims to allow user to communicate with the site admins in order 
     <li>Easy to navigate interface, along with the ability to easily organise games by the user's choice of category</li>
     <li>A responsive site that works on tablet, mobile and desktop</li>
     <li>The ability to sell unwanted games to the store</li>
-    <li>A fast estimate on sell price that doesn't require any commitment from the user</li>
 </ul>
 
 <h3>Admin Goals</h3>
@@ -29,7 +28,6 @@ games, and also aims to allow user to communicate with the site admins in order 
     <li>An easy to manage payment system</li>
     <li>The ability to update and delete products from the store library</li>
     <li>A form that requires photographic evidence of the quality of games, thereby allowing the right to refuse games that are in unacceptable condition.</li>
-    <li>A robust forumla to determine prices offered for second hand games</li>
 </ul>
 
 <h3>User Stories</h3>
@@ -38,7 +36,7 @@ games, and also aims to allow user to communicate with the site admins in order 
     <li>As a user, I expect to be able to easily log in to my profile to be able to check on the status of past and present orders.</li>
     <li>As a user, I would like to be able to sell my unwanted games.</li> 
     <li>As a user, I would like to know the price that I would be offered for selling games, without being pressured into commiting to selling for that price.</li>
-    <li>As a user, I would like the ability to be able to sort games by length of play, publisher and recommended age range.</li>
+    <li>As a user, I would like the ability to be able to keep a profile to save my details for faster checkouts.</li>
 </ul>
 
 <h2>Wireframes</h2>
@@ -84,9 +82,8 @@ the right hand side, in order to keep the front page minimalist, but to still im
 <p>Similarly to the background image, I wanted the colour scheme to be fun, but not too busy.</p>
 
 <ul>
-    <li>Primary Colour : #f5cb42; "" - A royal Gold that contrasts well with the main site image and evokes a color scheme found in many available games</li>
-    <li>Secondary Colour : #6F732F; "Spanish Bistro" - A variant in the Phthalo Green palette that ebbs slightly towards yellow. Again, a bright colour but one that is easy on the eyes.</li>
-    <li>Tertiary Colour : #B38A58; "Camel" - A calm yellow used for highliting agaisnt the green background whilst still blending somewhat.</li>
+    <li>Primary Colour : #6F732F; "Spanish Bistro" - A variant in the Phthalo Green palette that ebbs slightly towards yellow. Again, a bright colour but one that is easy on the eyes.</li>
+    <li>Secondary Colour : #f5cb42;  - A royal Gold that contrasts well with the main site image and evokes a color scheme found in many available games</li>
     <li>White Colour : #ffffff; "White" - Shows up well against the Phthalo Green</li>
     <li>Black Colour : #000; "Black" - Standard CSS black</li>
     <li>Danger Colour : #ff0000; "Red" - Used to denote required elements and errors</li>
@@ -100,13 +97,42 @@ the right hand side, in order to keep the front page minimalist, but to still im
 |-  |-  |-  |-  |
 | Game  | name  | max_length=254, default="" |  CharField  |
 | Year  | year_published  | max_digits=4 |  IntegerField  |
-| Min. Players  | min_players  | max_digits=3 |  IntegerField  |
-| Max. Players  | max_players  | max_digits=3 |  IntegerField  |
-| Min. Age  | min_age  | max_digits=2 |  IntegerField  |
+| Players  | (foreign_key)  | max_digits=3 |  IntegerField  |
+| Age  | (foreign_key)  | max_digits=2 |  IntegerField  |
 | Description  | description  | default="some string" |  TextField  |
 | Image  | image_url  | upload_to"static/images" |  ImageField  |
 | RRP  | msrp  | max_digits=6, decimal_places=2, default=0.0 |  DecimalField  |
 | Price  | price  | max_digits=6, decimal_places=2 |  DecimalField  |
+
+<h3>The Age Model</h3>
+
+| Name   | Key In API   | Validation    | Data Type   |
+|-  |-  |-  |-  |
+| Age  | min_age  | default="0.0" |  IntegerField  |
+
+<h3>The Players Model</h3>
+
+| Name   | Key In API   | Validation    | Data Type   |
+|-  |-  |-  |-  |
+| Players  | min_players  | default="0.0" |  IntegerField  |
+| Players  | max_players  | default="0.0" |  IntegerField  |
+
+<h3>The Sell Model</h3>
+
+| Name   | Key In db   | Validation    | Data Type   |
+|-  |-  |-  |-  |
+| Game Name  | game_name  | max_length=254, blank=False |  CharField  |
+| Game Picture  | model_pic  | upload_to='user_game_images/', default='' |  ImageField  |
+| Sealed  | sealed  | help_text="Only tick this box if your game is still contained in it's original wrapping", null=True |  BooleanField  |
+| Condition  | condition  | max_length=25, choices=GAME_CONDITION, default='good' |  CharField  |
+| Game Description  | game_description  | max_length=512, default="Please provide a quick description of your game's quality", null=True, blank=True |  TextField  |
+
+GAME_CONDITION = (
+    ('perfect,', 'PERFECT'),
+    ('good', 'GOOD'),
+    ('well used', 'WELL USED'),
+    ('damaged', 'DAMAGED'),
+)
 
 <h3>The Order Model</h3>
 
@@ -142,7 +168,7 @@ the right hand side, in order to keep the front page minimalist, but to still im
     <li>Checkout function created using the Stripe API</li>
     <li>Full game catalogue created using the Board Game Atlas API</li>
     <li>A shopping cart that allows users to amend the items currently in their basket</li>
-    <li>A from on the Sell page that allows users to enter information regarding a game that send them back an estimate price</li>
+    <li>A from on the Sell page that allows users to post information regarding a game for the site owner to review</li>
 </ul>
 
 <h3>Features to implement in the future</h3>
@@ -150,6 +176,7 @@ the right hand side, in order to keep the front page minimalist, but to still im
 <ul>
     <li>A rewards system, giving cutomers points based on their past purchases</li>
     <li>The ability for users to reset forgotten or lost passwords</li>
+    <li>The ability for customers to check the status of the game they want to sell using their profile</li>
 </ul>
 
 <h2>Technologies Used</h2>
@@ -189,5 +216,46 @@ the right hand side, in order to keep the front page minimalist, but to still im
 <h2>Testing</h2>
 
 <h2>Bugs</h2>
+
+<h3>The Sell Form</h3>
+
+<ul>
+    <li><strong>Issue : </strong>I ran into continual issues when trying to get the Sell form to post to the database.</li>
+    <li><strong>Solution : </strong>Initially, I was trying to render the context before I had rendered any sort of form, which meant that the form simply didn't appear
+    in the site. Rendering the context after checking the forms validity fixed this.</li>
+</ul>
+
+<h3>Navbar Link</h3>
+
+<ul>
+    <li><strong>Issue : </strong>The actual link to the sell form worked on the index link,
+    but not on the navbar link.</li>
+    <li><strong>Solution : </strong>This was a simple one that took far too long to spot - I had rendered the section of the nav as a dropdown. Upon
+    removing this value, the link worked perfectly.</li>
+</ul>
+
+<h3>Models - The JSON files</h3>
+
+<ul>
+    <li><strong>Issue : </strong>I was initially unable to get the value of the age and players models to appear within the products model as foreign keys.</li>
+    <li><strong>Solution : </strong>This took some time to wrap my head around, but soon made perfect sense. After creating the products model, I assumed if I made seperate json files with
+    matching pk's, that all of these products would then 'sync up'. In essence,iIn my age and players models,I was trying to match the number of ages and players to the pk of the products in my products.json. 
+    After several chats with Miklos, I understood that I needed to create a set number of fields, each with a unique value, then place those pk's in the products model - with the pk in this
+    case referencing a value found in both the players and age json files. For example, if a product has an age of 1, this actually references the value 8, as has been set in the age.json file.</li>
+</ul>
+
+<h3>Secure Checkout</h3>
+
+<ul>
+    <li><strong>Issue : </strong>Upon clicking 'secure checkout', my site did nothing, and just stayed on the same screen with all of the customer info still on screen.</li>
+    <li><strong>Solution : </strong></li>
+</ul>
+
+<h3>Delete</h3>
+
+<ul>
+    <li><strong>Issue : </strong>The delete from bag function was initially unclickable, and didn't work.</li>
+    <li><strong>Solution : </strong></li>
+</ul>
 
 <h2>Deployment</h2>
