@@ -31,7 +31,7 @@ API_CLIENT_ID = os.environ.get('API_CLIENT_ID', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['scrambles86-dice-depot.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -126,6 +126,11 @@ WSGI_APPLICATION = 'dice_depot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+if 'DATABASE_URL' is os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
 DATABASES = {
    'default': {
       'ENGINE': 'django.db.backends.sqlite3',
