@@ -10,10 +10,6 @@
     </div>
 {% endblock %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'static/css/checkout.css' %}"    
-{% endblock %}
-
 {% block content %}
     <div class="container"> 
         <div class="row text-center card-body">
@@ -89,6 +85,7 @@
                         <legend class="px-2 float-left w-auto">Payment Details</legend>
                         <div class="mb-3" id="card-element"></div>
                         <div class="mb-3" id="payment-failed"></div>
+                        <div class="mb-3" id="card-errors"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
                     <div class="button mt-5 mb-2 text-center">
@@ -109,6 +106,7 @@
 
                 </form>
             </div>
+        
             
 
         
