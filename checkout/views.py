@@ -32,8 +32,12 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    print("XXXXXXXXX   Beginning of checkout function    xxxxxxxxxxxxxx")
+
     if request.method == 'POST':
+        print("In POST method")
         bag = request.session.get('bag', {})
+        print(f"Bag is: {bag}")
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -46,6 +50,7 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
+        print(f"Form data: {form_data}")
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -71,11 +76,13 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
 
                     request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_confirm', args=[order.order_number]))
         else:
-            messages.error(request, 'Soemthing went wrong - please double check your information')
+            messages.error(request, 'Something went wrong - please double check your information')
     else:
+        print("In GET method")
         bag = request.session.get('bag', {})
+        print(f"Bag is: {bag}")
         if not bag:
             messages.error(request, "Your bag is empty!")
             return redirect(reverse('products'))
@@ -129,39 +136,40 @@ def checkout(request):
 
 def checkout_confirm(request, order_number):
     """
-    Handler for succesful orders
+    Handle successful checkouts
     """
-
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
 
+        # Save the user's info
         if save_info:
             profile_data = {
-            'default_phone_number': order.phone_number,
-            'default_country': order.country,
-            'default_postcode': order.postcode,
-            'default_town_or_city': order.town_or_city,
-            'default_street_address1': order.street_address_1,
-            'default_street_address2': order.street_address_2,
-            'default_county': order.county,
-        }
-        profile_form = ProfileForm(profile_data, instance=profile)
-        if profile_form.is_valid():
-            profile_form.save()
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
-    messages.success(request, f'Order confirmed! \
-        Your order number is {order_number}. We will email this \
-        confirmation to {order.email}.')
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/checkout_confirm.html'
     context = {
         'order': order,
     }
