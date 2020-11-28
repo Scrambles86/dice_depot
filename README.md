@@ -260,6 +260,8 @@ the right hand side, in order to keep the front page minimalist, but to still im
 
 <h2>Deployment</h2>
 
+<h3>Local Deployment</h3>
+
 <p>The following installs are required in order to deplot The Dice Depot locally:</p>
 <ul>
    <li>A development environment. I reccommend VS Code - though Dice Depot was completed in Gitpod.</li> 
@@ -269,8 +271,71 @@ the right hand side, in order to keep the front page minimalist, but to still im
 </ul>
 <p>Additionally, a developer account with Stripe is required.</p>
 
-<p>From the terminal in your IDE, run :</p>
+<p>1 - From the terminal in your IDE, run :</p>
 
 ```
 git clone https://github.com/Scrambles86/dice_depot
 ```
+
+<p>2 - Open the dice_depot folder, and in the terminal enter : </p>
+
+```
+python3 -m .venv venv
+```
+
+<p>Followed by : </p>
+
+```
+.venv\bin\activate
+```
+
+<p>This will activate your virtual environment.</p>
+
+<p>3 - In order to ensure that the project has all of it's required settings, use the terminal to enter : </p>
+
+```
+pip3 -r requirements.txt
+```
+
+<p>4 - You will then need a file to keep your secret information. If using Gitpod, you can set these in your settings in the
+main workspace area, and then reference them in your projects settings file. You can use an env.py file, but this will make your secret information
+visible to anyone who accesses your project.</p>
+
+<p>5 - In your terminal, enter the following commands : </p>
+
+```
+python3 manage.py makemigrations
+```
+
+```
+python3 manage.py migrate
+```
+
+```
+python3 manage.py loaddata age
+```
+
+```
+python3 manage.py loaddata players
+```
+
+```
+python3 manage.py loaddata products
+```
+
+<p>This will install the models and then load the product data from the json files. It's important to do this in this order, as the json data wont load without
+their requisite models.</p>
+
+<p>6 - Create a superuser for your admin page using :</p>
+
+```
+python3 manage.py createsuperuser
+```
+<p>You can now run your project locally from the terminal by typing :</p>
+
+```
+python3 mnage.py runserver
+```
+
+<h3>Heroku Deployment</h3>
+
