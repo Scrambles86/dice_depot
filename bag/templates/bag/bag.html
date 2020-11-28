@@ -29,7 +29,6 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Game Info</th>
-                                    <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
@@ -38,8 +37,8 @@
 
                             {% for item in bag_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
-                                        <img class="img-fluid" src="{{ item.product.image_url }}" alt="#">
+                                    <td class="py-3">
+                                        <p class="my-0">{{ item.product.name }}</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">{{ item.product.price }}</p>
@@ -100,7 +99,7 @@
     $('.remove-item').click(function(e) {
         let csrfToken = "{{ csrf_token }}"
         let itemId = $(this).attr('id').split('remove_')[1];
-        let url = `/bag/remove/${itemId}`;
+        let url = `/bag/remove/${itemId}/`;
         let data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url,data)

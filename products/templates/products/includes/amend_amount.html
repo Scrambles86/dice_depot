@@ -1,8 +1,31 @@
 <script type="text/javascript">
-    $(.'increment-qty').click(function(e) {
-        e.preventdefault();
-        let closestInput = $(this).closest('input-group').find('.qty_input')[0];
+    function handleEnableDisable(itemId) {
+        let currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+    
+    // Incremement product quantity
+    $('.increment-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
     });
+
+    // Decrement product quantity
+    $('.decrement-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput =  $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue - 1);
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId)
+    });
+
+
 </script>
