@@ -13,7 +13,6 @@ GAME_CONDITION = (
 class Game(models.Model):
 
     game_name = models.CharField(max_length=254, blank=False)
-    model_pic = models.ImageField(upload_to='user_game_images/', default='', null=True)
     sealed = models.BooleanField(null=True)
     condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
     game_description = models.TextField(max_length=512, default="Please disclose any damage, defects, and/or missing pieces", null=True, blank=True)
