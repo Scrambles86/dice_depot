@@ -122,17 +122,18 @@ the right hand side, in order to keep the front page minimalist, but to still im
 | Name   | Key In db   | Validation    | Data Type   |
 |-  |-  |-  |-  |
 | Game Name  | game_name  | max_length=254, blank=False |  CharField  |
-| Game Picture  | model_pic  | upload_to='user_game_images/', default='' |  ImageField  |
+| Email  | email  | max_length=254, null=False, blank=False |  EmailField  |
 | Sealed  | sealed  | help_text="Only tick this box if your game is still contained in it's original wrapping", null=True |  BooleanField  |
 | Condition  | condition  | max_length=25, choices=GAME_CONDITION, default='good' |  CharField  |
 | Game Description  | game_description  | max_length=512, default="Please provide a quick description of your game's quality", null=True, blank=True |  TextField  |
 
-GAME_CONDITION = (
+<p>GAME_CONDITION = (
     ('perfect,', 'PERFECT'),
     ('good', 'GOOD'),
     ('well used', 'WELL USED'),
     ('damaged', 'DAMAGED'),
-)
+)</p>
+
 
 <h3>The Order Model</h3>
 
@@ -141,7 +142,7 @@ GAME_CONDITION = (
 | User  | user  | User, on_delete=models.PROTECT |  ForeignKey  |
 | Full Name  | full_name  | max_length=50, blank=False |  CharField  |
 | Phone Number  | phone_number  | max_length=20, blank=False |  CharField  |
-| Country  | country  | max_length=40, blank=False |  CharField  |
+| Country  | country  | blank_label='Country *', max_length=40, blank=False |  CharField  |
 | Postcode  | postcode  | max_length=40, blank=False |  CharField  |
 | City  | city  | max_length=40, blank=False |  CharField  |
 | Address Line 1  | address_line_1  | max_length=50, blank=False |  CharField  |
@@ -177,6 +178,8 @@ GAME_CONDITION = (
     <li>A rewards system, giving cutomers points based on their past purchases</li>
     <li>The ability for users to reset forgotten or lost passwords</li>
     <li>The ability for customers to check the status of the game they want to sell using their profile</li>
+    <li>The ability to attach an image to the sell form</li>
+    <li>The ability to view the progress of games being sold in a profile</li>
 </ul>
 
 <h2>Technologies Used</h2>
@@ -222,7 +225,9 @@ GAME_CONDITION = (
 <ul>
     <li><strong>Issue : </strong>I ran into continual issues when trying to get the Sell form to post to the database.</li>
     <li><strong>Solution : </strong>Initially, I was trying to render the context before I had rendered any sort of form, which meant that the form simply didn't appear
-    in the site. Rendering the context after checking the forms validity fixed this.</li>
+    in the site. Rendering the context after checking the forms validity fixed this. Additionally, the Sell model originally contained an image field, which can be seen in the commits. 
+    Unfortunately, due to time constraints, this had to be removed. An error was being thrown up by the form itself, claiming that no image was attached, even when there was. Setting the field to not require a picture didn't help,
+    and it was stopping the form from hitting the database, so this will have to be added at a later date.</li>
 </ul>
 
 <h3>Navbar Link</h3>
@@ -248,14 +253,9 @@ GAME_CONDITION = (
 
 <ul>
     <li><strong>Issue : </strong>Upon clicking 'secure checkout', my site did nothing, and just stayed on the same screen with all of the customer info still on screen.</li>
-    <li><strong>Solution : </strong></li>
-</ul>
-
-<h3>Delete</h3>
-
-<ul>
-    <li><strong>Issue : </strong>The delete from bag function was initially unclickable, and didn't work.</li>
-    <li><strong>Solution : </strong></li>
+    <li><strong>Solution : </strong>This was the toughest spot - Stripe was giving me a 400 error in the console, which meant the data being sent to Stripe didn't match what it was
+    expecting. After checking that the Stripe js included all the correct fields, I eventually found that the Country field was causing the issue. It was set in a manner
+    that didn't abbreviate countries to their 2 letter acronym for Stripe, which was causing the form not to save. Adding in blank_label='Country *' fixed this problem.</li>
 </ul>
 
 <h2>Deployment</h2>

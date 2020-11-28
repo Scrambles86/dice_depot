@@ -29,4 +29,4 @@ def sell(request):
             "form": form,
     }
 
-    return render(request, template, context)
+    return redirect(request, template, context)
