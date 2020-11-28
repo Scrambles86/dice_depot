@@ -102,3 +102,7 @@ body {
 	background: #6699ff;
 	z-index: -1;
 }
+
+.update-link {
+    cursor: pointer;
+}
