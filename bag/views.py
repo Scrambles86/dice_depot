@@ -42,7 +42,7 @@ def edit_bag(request, product_id):
         bag.pop(product_id)
 
     request.session['bag'] = bag
-    return redirect(reverse, ('view_bag'))
+    return redirect(redirect_url)
 
 def remove_from_bag(request, product_id):
     """
@@ -54,4 +54,4 @@ def remove_from_bag(request, product_id):
     bag.pop(product_id)
 
     request.session['bag'] = bag
-    return HttpResponse(status=200)
+    return redirect(reverse('view_bag'))
