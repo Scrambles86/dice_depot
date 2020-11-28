@@ -259,3 +259,18 @@ the right hand side, in order to keep the front page minimalist, but to still im
 </ul>
 
 <h2>Deployment</h2>
+
+<p>The following installs are required in order to deplot The Dice Depot locally:</p>
+<ul>
+   <li>A development environment. I reccommend VS Code - though Dice Depot was completed in Gitpod.</li> 
+   <li>PIP</li>
+   <li>Python</li>
+   <li>Git</li>
+</ul>
+<p>Additionally, a developer account with Stripe is required.</p>
+
+<p>From the terminal in your IDE, run :</p>
+
+```
+git clone https://github.com/Scrambles86/dice_depot
+```
