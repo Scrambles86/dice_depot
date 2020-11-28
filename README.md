@@ -218,6 +218,45 @@ the right hand side, in order to keep the front page minimalist, but to still im
 
 <h2>Testing</h2>
 
+<p>The Dice Depot has been coded and tested on Mozilla Firefox and Google Chrome internet browsers, on both a Macbook Pro and a desktop PC -it runs identically on both.
+The code for The Dice Depot was written in Gitpod</p>
+
+<p>All of the model forms have been tested to ensure that they correctly post to the database. The JSON files have all been validated numerous times</p>
+
+<h3>Specific App Testing</h3>
+
+<h2>Home</h2>
+
+<h3>Planning Stage</h3>
+
+<p>The home page needed to have links to all the other relevant functions, and very little else.</p>
+
+<h3>Implementation</h3>
+
+<p>After deciding on a background image, the basic structure was created, along with a navbar and mobile nav. Hyperlinks were originally left empty until other
+apps were created, as this can cause Django to throw error messages as it looks for things that don't exist.</p>
+
+<h3>Testing</h3>
+
+<p>Different app links were tested as they were created, and I'm happy that all of these links work.</p>
+
+<h2>Products</h2>
+
+<h3>Planning Stage</h3>
+
+<p>Setting up the products app was a vital first step, as it meant that </p>
+
+<h3>Implementation</h3>
+
+<p></p>
+
+<h3>Testing</h3>
+
+<p></p>
+
+
+
+
 <h2>Bugs</h2>
 
 <h3>The Sell Form</h3>
@@ -372,7 +411,7 @@ echo web: python3 app.py > Procfile
 <p>This project would not have been possible without <a href="ckz8780" target="_blank">ckz8780</a> and his Boutique Ado project. This was an exemplary walkthrough, and was vital
 in my implementation of Stripe, as well as understanding of the nature of how individual apps work within Django. Much of the code in this project is an adaptation of his fantastic example.</p>
 
-<p>As always, I have to thank my mentor<a href="https://github.com/Eventyret">Simen</a>, who throughout the course has provided encouragment, the occasional kick up the backside,
+<p>As always, I have to thank my mentor <a href="https://github.com/Eventyret">Simen</a>, who throughout the course has provided encouragment, the occasional kick up the backside,
 and endless knowledge and troubleshooting. He is an asset to the Code Institute.</p>
 
 <p>And a huge thanks to all of the Code Institue tutors, particulary Miklos, Scott and Michael for this project. I have no doubt that they'll be glad to see the back of me, 
