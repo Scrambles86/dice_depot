@@ -1,6 +1,6 @@
 <h1>The Dice Depot 🎲</h1>
 
-<p>The Dice Dept is an e-commerce website, designed to be the best destination for fans of Tabletop Gaming, 
+<p>The Dice Depot is an e-commerce website, designed to be the best destination for fans of Tabletop Gaming, 
 giving them both a wide variety of the most popular and up to date titles, 
 and the ability to sell their unwanted games to us.</p>
 
@@ -27,7 +27,7 @@ games, and also aims to allow user to communicate with the site admins in order 
     <li>Sleek and responsive site design</li>
     <li>An easy to manage payment system</li>
     <li>The ability to update and delete products from the store library</li>
-    <li>A form that requires photographic evidence of the quality of games, thereby allowing the right to refuse games that are in unacceptable condition.</li>
+    <li>A form that requires evidence of the quality of games, thereby allowing the right to refuse games that are in unacceptable condition.</li>
 </ul>
 
 <h3>User Stories</h3>
@@ -334,8 +334,51 @@ python3 manage.py createsuperuser
 <p>You can now run your project locally from the terminal by typing :</p>
 
 ```
-python3 mnage.py runserver
+python3 manage.py runserver
 ```
 
 <h3>Heroku Deployment</h3>
+
+<p>1 - Create your requirments.txt file using : </p>
+
+```
+pip3 freeze > requirements.txt
+```
+
+<p>2 - Create a Procfile (Make sure it's a capital P!) and push the files.</p>
+
+```
+echo web: python3 app.py > Procfile
+```
+
+<p>3 - In Heroku, click 'create app'</p>
+
+<p>4 - On the 'Deploy' tab, click 'Github' under 'Deployment method'</p>
+
+<p>5 - On the Settings tab, click 'reveal config vars'</p>
+
+<p>6 - Set your DATABASE_URL, SECRET_KEY, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY and save them.</p>
+
+<p>7 - On the main dashboard, click 'Deploy' and wait for the build to finish before opening the app.</p>
+
+<h2>Media & Game Content</h2>
+<ul>
+    <li>The main background image was found in Unsplash</li>
+    <li>All other images, and the game information are taken from the Board Game Atlas API</li>
+</ul>
+
+<h2>Acknowledgements</h2>
+
+<p>This project would not have been possible without <a href="ckz8780" target="_blank">ckz8780</a> and his Boutique Ado project. This was an exemplary walkthrough, and was vital
+in my implementation of Stripe, as well as understanding of the nature of how individual apps work within Django. Much of the code in this project is an adaptation of his fantastic example.</p>
+
+<p>As always, I have to thank my mentor<a href="https://github.com/Eventyret">Simen</a>, who throughout the course has provided encouragment, the occasional kick up the backside,
+and endless knowledge and troubleshooting. He is an asset to the Code Institute.</p>
+
+<p>And a huge thanks to all of the Code Institue tutors, particulary Miklos, Scott and Michael for this project. I have no doubt that they'll be glad to see the back of me, 
+but they were still happy to help as much as they could at all hours.</p>
+
+<h2>Disclaimer</h2>
+
+<p>The contents of this website are for educational purposes only. Some game details may differ.</p>
 
