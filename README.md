@@ -240,7 +240,7 @@ apps were created, as this can cause Django to throw error messages as it looks 
 
 <p>Different app links were tested as they were created, and I'm happy that all of these links work.</p>
 
-<h2>Products</h2>
+<h2>Product Rendering</h2>
 
 <h3>Planning Stage</h3>
 
@@ -249,11 +249,13 @@ apps were created, as this can cause Django to throw error messages as it looks 
 <h3>Implementation</h3>
 
 <p>The first step was to obtain the necessary product information, which I found in the Board Game Atlas API. Though very dense in information, this was a rather cluttered API, 
- and much time was spent refactoring and validating the json to get it to it's current stage. </p>
+ and much time was spent refactoring and validating the json to get it to it's current stage. Following this, the products were uploaded to the Django database by attaching them
+ to their requisite models. Once this was done, it was a matter of presenting the products well on the main products page, and including all of the relevant information
+ on the product description page.</p>
 
 <h3>Testing</h3>
 
-<p></p>
+<p>All of the products look the same in the view on the all products page, and contain the information required on their individual product description pages.</p>
 
 
 
@@ -409,8 +411,9 @@ echo web: python3 app.py > Procfile
 
 <h2>Acknowledgements</h2>
 
-<p>This project would not have been possible without <a href="ckz8780" target="_blank">ckz8780</a> and his Boutique Ado project. This was an exemplary walkthrough, and was vital
-in my implementation of Stripe, as well as understanding of the nature of how individual apps work within Django. Much of the code in this project is an adaptation of his fantastic example.</p>
+<p>This project would not have been possible without <a href="https://github.com/ckz8780" target="_blank">ckz8780</a> and his Boutique Ado project. This was an exemplary walkthrough, and was vital
+in my implementation of Stripe, as well as understanding of the nature of how individual apps work within Django. 
+Much of the code in this project is an adaptation of his fantastic example.</p>
 
 <p>As always, I have to thank my mentor <a href="https://github.com/Eventyret">Simen</a>, who throughout the course has provided encouragment, the occasional kick up the backside,
 and endless knowledge and troubleshooting. He is an asset to the Code Institute.</p>
