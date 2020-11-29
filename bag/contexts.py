@@ -10,15 +10,27 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for product_id, quantity in bag.items():
-        product = get_object_or_404(Product, pk=product_id)
-        total += quantity * product.price
-        product_count += quantity
-        bag_items.append({
-            'product_id': product_id,
-            'quantity': quantity,
-            'product': product,
-        })
+    for product_id, item_data in bag.items():
+        if isinstance(item_data, int):
+            product = get_object_or_404(Product, pk=product_id)
+            total += item_data * product.price
+            product_count += item_data
+            bag_items.append({
+                'item_id': product_id,
+                'quantity': item_data,
+                'product': product,
+            })
+        else:
+            product = get_object_or_404(Product, pk=product_id)
+            for size, quantity in item_data['items_by_size'].items():
+                total += item_data * product.price
+                product_count += item_data
+                bag_items.append({
+                    'item_id': product_id,
+                    'quantity': quantity,
+                    'product': product,
+                    'size': size,
+                })
 
     delivery = total * Decimal(settings.DEFAULT_DELIVERY_PERCENTAGE / 100)
     grand_total = delivery + total

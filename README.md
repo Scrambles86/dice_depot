@@ -244,11 +244,12 @@ apps were created, as this can cause Django to throw error messages as it looks 
 
 <h3>Planning Stage</h3>
 
-<p>Setting up the products app was a vital first step, as it meant that </p>
+<p>Setting up the products app was a vital first step, as the majority of the other functionality revloves around them.</p>
 
 <h3>Implementation</h3>
 
-<p></p>
+<p>The first step was to obtain the necessary product information, which I found in the Board Game Atlas API. Though very dense in information, this was a rather cluttered API, 
+ and much time was spent refactoring and validating the json to get it to it's current stage. </p>
 
 <h3>Testing</h3>
 

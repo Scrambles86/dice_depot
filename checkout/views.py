@@ -32,12 +32,8 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    print("XXXXXXXXX   Beginning of checkout function    xxxxxxxxxxxxxx")
-
     if request.method == 'POST':
-        print("In POST method")
         bag = request.session.get('bag', {})
-        print(f"Bag is: {bag}")
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -50,7 +46,6 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
-        print(f"Form data: {form_data}")
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -80,9 +75,7 @@ def checkout(request):
         else:
             messages.error(request, 'Something went wrong - please double check your information')
     else:
-        print("In GET method")
         bag = request.session.get('bag', {})
-        print(f"Bag is: {bag}")
         if not bag:
             messages.error(request, "Your bag is empty!")
             return redirect(reverse('products'))
@@ -158,7 +151,7 @@ def checkout_confirm(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            user_profile_form = UserProfile(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 

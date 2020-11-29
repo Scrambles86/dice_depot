@@ -42,7 +42,7 @@ def edit_bag(request, product_id):
         bag.pop(product_id)
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(reverse('view_bag'))
 
 def remove_from_bag(request, product_id):
     """

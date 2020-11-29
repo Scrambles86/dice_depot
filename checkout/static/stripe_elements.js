@@ -2,7 +2,6 @@ let stripePublicKey = $("#id_stripe_public_key").text().slice(1, -1);
 let clientSecret = $("#id_client_secret").text().slice(1, -1);
 let stripe = Stripe(stripePublicKey);
 let elements = stripe.elements();
-//card.mount('#card-element');
 var style = {
     base: {
         color: '#000',
