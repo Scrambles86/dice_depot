@@ -276,15 +276,38 @@ it was simply a matter of creating the necessary forms and models in order to en
 
 <h3>Planning Stage</h3>
 
-<p></p>
+<p>The Sell app is designed for users to quickly and easily send an email to the admin, with details of a game that they want to sell. The key goals here
+was to make the form clean and easy to use so as not to dissuade the user.</p>
 
 <h3>Implementation</h3>
 
-<p></p>
+<p>The Sell app simply needed a form and a model to be efficient, due to there being no data to load from the admin side. Once the model and form were created,
+it became a matter of creating a view that would render the form, and let the user know that their details have been received.</p>
 
 <h3>Testing</h3>
 
-<p></p>
+<p>Currently, the Sell form acts more as a contact form of sorts. Originally there was an image field to allow user images to be uploaded for the use of the admin in revieweing the product.
+Unfortunately, this had to be removed due to time constraints. The app currently does not require the user to have a profile in order to use the form, as I felt that some users may not
+want to sign up to a service that they may end up not using - dependent on the offer from the admin. The user is given a toast notification to advise them that their details have been received,
+and they will be contacted upon product review.</p>
+
+<h2>Stripe Payments</h2>
+
+<h3>Planning Stage</h3>
+
+<p>The most important aspect of the online store, is to make sure that user's can actually buy things from the store. Due to it's relatively simple information, as well
+as it's additional wealth of reccommended CSS and JS, Stripe was the most efficient choice.</p>
+
+<h3>Implementation</h3>
+
+<p>Once signed up to Stripe, the implementation of it is fairly well explained by the Stripe documentation. Once the Stripe JS link has been added,
+functions were then created to pass all relevant user and order information to Stripe in order for payment to succeed. As I leanred during bug fixing, it was vital to ensure that
+all the data matches the data that Stripe is expecting - otherwise the payment intent will hit Stripe, but your console will receive an error, as Stripe has been unable
+to save it's reuqired forms.</p>
+
+<h3>Testing</h3>
+
+<p>After a good chunk of bug fixing as explained below, the intended and succeeded payments now hit the developer Stripe dashboard.</p>
 
 
 
