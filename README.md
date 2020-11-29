@@ -257,6 +257,35 @@ apps were created, as this can cause Django to throw error messages as it looks 
 
 <p>All of the products look the same in the view on the all products page, and contain the information required on their individual product description pages.</p>
 
+<h2>Profile Functions</h2>
+
+<h3>Planning Stage</h3>
+
+<p>The profile functions are a vital part of any online store. Users need to be able to log in, log out and save all of their information for future orders.</p>
+
+<h3>Implementation</h3>
+
+<p>As Django already contains a user database, this was kept relatively simple. Once allauth was installed in the project (providing a ready to use set of login and register pages),
+it was simply a matter of creating the necessary forms and models in order to ensure these were being pushed to the database correctly.</p>
+
+<h3>Testing</h3>
+
+<p>All login, register and log out functions are working and redirecting as they should, and user information is stored in their profiles for future use.</p>
+
+<h2>The Sell App</h2>
+
+<h3>Planning Stage</h3>
+
+<p></p>
+
+<h3>Implementation</h3>
+
+<p></p>
+
+<h3>Testing</h3>
+
+<p></p>
+
 
 
 
