@@ -44,6 +44,17 @@ body {
     }
 }
 
+/* ------------- Allauth form styling */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
 /* ------------- Card Styling */
 
 .card-style {
