@@ -48,10 +48,16 @@ def remove_from_bag(request, product_id):
     """
     Delete game from bag
     """
+    try:
+        product = get_object_or_404(Product, pk=product_id)
+        bag = request.session.get('bag', {})
 
-    bag = request.session.get('bag', {})
+        bag.pop(product_id)
+        messages.success(request, f'Removed {product.name} from your bag')
 
-    bag.pop(product_id)
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
 
-    request.session['bag'] = bag
-    return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
