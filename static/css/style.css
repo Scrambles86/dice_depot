@@ -57,6 +57,9 @@ body {
 
 .allauth-form-inner-content {
     padding: 20px;
+    background: #ffffff;
+    border-radius: 1rem;
+    margin: 3rem 2rem;
 }
 
 
