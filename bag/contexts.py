@@ -22,14 +22,13 @@ def bag_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=product_id)
-            for size, quantity in item_data['items_by_size'].items():
+            for quantity in item_data.items():
                 total += item_data * product.price
                 product_count += item_data
                 bag_items.append({
                     'item_id': product_id,
                     'quantity': quantity,
                     'product': product,
-                    'size': size,
                 })
 
     delivery = total * Decimal(settings.DEFAULT_DELIVERY_PERCENTAGE / 100)
