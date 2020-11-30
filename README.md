@@ -298,6 +298,10 @@ functions were then created to pass all relevant user and order information to S
 all the data matches the data that Stripe is expecting - otherwise the payment intent will hit Stripe, but your console will receive an error, as Stripe has been unable
 to save it's reuqired forms.</p>
 
+<h3>Testing</h3>
+
+<p></p>
+
 
 <h2>Bugs</h2>
 
@@ -389,7 +393,7 @@ python3 -m .venv venv
 <p>3 - In order to ensure that the project has all of it's required settings, use the terminal to enter : </p>
 
 ```
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 <p>4 - You will then need a file to keep your secret information. If using Gitpod, you can set these in your settings in the
