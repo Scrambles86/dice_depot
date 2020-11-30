@@ -8,6 +8,7 @@ body {
     height: calc(100vh - 164px);
     color: #f5cb42;
     font-family: 'Spectral SC', serif;
+    overflow-x: hidden;
 }
 
 .main-container {
