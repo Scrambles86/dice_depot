@@ -1,7 +1,4 @@
 from django.shortcuts import render
-from django.views.generic.edit import FormView
-from django.db import models
-from .models import Game
 from .forms import SaleForm
 from django.contrib import messages
 

@@ -19,7 +19,7 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile info updated')
         else:
-            messages.error(request, 'Something went wrong - please ensure all the fields are valid')
+            messages.error(request, 'Something went wrong - please ensure all fields are valid')
     else:
         form = ProfileForm(instance=profile)
 
