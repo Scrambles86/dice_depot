@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_header %}
+{% include 'includes/nav.html' %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 centered">
+            <h1>Error 404</h1>
+            <a href="{% url 'all_products' %}">Back to store</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
