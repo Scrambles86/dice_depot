@@ -22,7 +22,7 @@ def sell(request):
     else:
         form = SaleForm()
 
-    template = 'sell/sell.html'
+    template = 'sell.html'
     context = {
             "form": form,
     }
