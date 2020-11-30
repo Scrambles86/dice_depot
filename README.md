@@ -305,12 +305,6 @@ functions were then created to pass all relevant user and order information to S
 all the data matches the data that Stripe is expecting - otherwise the payment intent will hit Stripe, but your console will receive an error, as Stripe has been unable
 to save it's reuqired forms.</p>
 
-<h3>Testing</h3>
-
-<p>After a good chunk of bug fixing as explained below, the intended and succeeded payments now hit the developer Stripe dashboard.</p>
-
-
-
 
 <h2>Bugs</h2>
 
@@ -348,8 +342,22 @@ to save it's reuqired forms.</p>
 <ul>
     <li><strong>Issue : </strong>Upon clicking 'secure checkout', my site did nothing, and just stayed on the same screen with all of the customer info still on screen.</li>
     <li><strong>Solution : </strong>This was the toughest spot - Stripe was giving me a 400 error in the console, which meant the data being sent to Stripe didn't match what it was
-    expecting. After checking that the Stripe js included all the correct fields, I eventually found that the Country field was causing the issue. It was set in a manner
+    expecting. After checking that the Stripe Javascript included all the correct fields, I eventually found that the Country field was causing the issue. It was set in a manner
     that didn't abbreviate countries to their 2 letter acronym for Stripe, which was causing the form not to save. Adding in blank_label='Country *' fixed this problem.</li>
+</ul>
+
+<h3>Product Admin</h3>
+
+<ul>
+    <li><strong>Issue :</strong>The admin functions were working, but still behaving strangely. When the admin added a product to the
+    database, or edited an existing product, Django would give an error code to do with the product description view. Strangely, the add or edit 
+    function would still complete despite this error.</li>
+    <li><strong>Solution :</strong>Due to time constraints, I made the decision to change the redirect so that if a superuser clicks on a product,
+    they are redirected to the edit product view. This bug was a particular struggle, as the product description view was only throwing
+    an error for superusers - there are no issues with standard users. Print statements were added to the view, and the html was commented
+    out so that I could see any errors in the terminal, but the problem consistently pointed to some sort of issue in the relationship
+    between the superuser and the product description view that I was sadly unable to figure out. By sending the superuser to the edit
+    product view, it at least means that the superuser can view product details on the store front.</li>
 </ul>
 
 <h2>Deployment</h2>
