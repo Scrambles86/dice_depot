@@ -24,9 +24,17 @@
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 card-style">
+                                {% if request.user.is_superuser %}
+                                 
+                                <a href="{% url 'edit_product' product.id %}">
+                                    <img class="img-fluid card-img-top" src="{{ product.image_url }}" alt="{{ product.name }}">
+                                </a>
+                                {% else %}
                                 <a href="{% url 'product_description' product.id %}">
                                     <img class="img-fluid card-img-top" src="{{ product.image_url }}" alt="{{ product.name }}">
                                 </a>
+                                {% endif %}
+                                
                                 <div class="card-body">
                                     <h3 class="mb-0 text-center">{{ product.name }}</h3>
                                 </div>

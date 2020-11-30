@@ -73,7 +73,7 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Product added to database')
-            return redirect(reverse('product_description', args=[product.id]))
+            
         else:
             messages.error(request, 'Add product failed - please check the fields are correct before submitting')
     else:
@@ -99,7 +99,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product updated')
-            return redirect(reverse('product_detail', args=[product.id]))
+            
         else:
             messages.error(request, 'Update failed - please check that your form is valid')
     else:
