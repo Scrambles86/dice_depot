@@ -300,7 +300,9 @@ to save it's reuqired forms.</p>
 
 <h3>Testing</h3>
 
-<p></p>
+<p>There were several issues in the implementation of Stripe. The main issue was being rendered locally and is discussed below in the bugs. The issue was
+the information being pushed to Stripe was different to what Stripe was expecting. Once pushed to Heroku, this issue became prevelant again, but this
+time for the same reason but for a different field. These have both since been amended and payments now work correctly.</p>
 
 
 <h2>Bugs</h2>
