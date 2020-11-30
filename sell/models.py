@@ -16,7 +16,7 @@ class Game(models.Model):
     sealed = models.BooleanField(null=True)
     email = models.EmailField(max_length=254, null=False, blank=False)
     condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
-    game_description = models.TextField(max_length=512, default="Please disclose any damage, defects, and/or missing pieces", null=True, blank=True)
+    game_description = models.TextField(max_length=512, null=True, blank=True)
 
     def __str__(self):
         return self.game_name
