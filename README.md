@@ -97,8 +97,8 @@ the right hand side, in order to keep the front page minimalist, but to still im
 |-  |-  |-  |-  |
 | Game  | name  | max_length=254, default="" |  CharField  |
 | Year  | year_published  | max_digits=4 |  IntegerField  |
-| Players  | (foreign_key)  | max_digits=3 |  IntegerField  |
-| Age  | (foreign_key)  | max_digits=2 |  IntegerField  |
+| Players  | (foreign_key)  | max_digits=3 |  ForeignKey  |
+| Age  | (foreign_key)  | max_digits=2 |  ForeignKey  |
 | Description  | description  | default="some string" |  TextField  |
 | Image  | image_url  | upload_to"static/images" |  ImageField  |
 | RRP  | msrp  | max_digits=6, decimal_places=2, default=0.0 |  DecimalField  |
@@ -126,13 +126,6 @@ the right hand side, in order to keep the front page minimalist, but to still im
 | Sealed  | sealed  | help_text="Only tick this box if your game is still contained in it's original wrapping", null=True |  BooleanField  |
 | Condition  | condition  | max_length=25, choices=GAME_CONDITION, default='good' |  CharField  |
 | Game Description  | game_description  | max_length=512, default="Please provide a quick description of your game's quality", null=True, blank=True |  TextField  |
-
-<p>GAME_CONDITION = (
-    ('perfect,', 'PERFECT'),
-    ('good', 'GOOD'),
-    ('well used', 'WELL USED'),
-    ('damaged', 'DAMAGED'),
-)</p>
 
 
 <h3>The Order Model</h3>
