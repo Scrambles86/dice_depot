@@ -45,7 +45,7 @@ def past_orders(request, order_number):
         f'A confirmation number for order {order_number} was sent on the order date'
     ))
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/checkout_confirm.html'
     context = {
         'order': orders,
         'from_profile': True,
