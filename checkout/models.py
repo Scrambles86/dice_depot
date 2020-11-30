@@ -38,7 +38,7 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Updates total in the event of the bag beign edited
+        Updates total in the event of the bag being edited
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.grand_total = self.order_total + self.delivery_cost
