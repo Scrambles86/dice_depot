@@ -13,10 +13,10 @@ GAME_CONDITION = (
 class Game(models.Model):
 
     game_name = models.CharField(max_length=254, blank=False)
-    sealed = models.BooleanField(null=True)
     email = models.EmailField(max_length=254, null=False, blank=False)
-    condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
     game_description = models.TextField(max_length=512, null=True, blank=True)
+    sealed = models.BooleanField(null=True)
+    condition = models.CharField(max_length=25, choices=GAME_CONDITION, default='good')
 
     def __str__(self):
         return self.game_name
