@@ -55,6 +55,11 @@ body {
     border-radius: 0;
 }
 
+.allauth-form-inner-content {
+    padding: 20px;
+}
+
+
 /* ------------- Card Styling */
 
 .card-style {
