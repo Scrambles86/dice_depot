@@ -22,7 +22,6 @@ def profile(request):
             messages.error(request, 'Something went wrong - please ensure all fields are valid')
     else:
         form = ProfileForm(instance=profile)
-
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
