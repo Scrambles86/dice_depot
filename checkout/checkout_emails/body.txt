@@ -3,7 +3,7 @@ Hi {{ order.full_name }}!
 Thanks for placing an order from The Dice Depot on {{ order.date }}!
 
 Your order number is #{{ order.order_number }}.
-Order Total including delivery is £{{ order.grand_total }}
+Order Total including delivery is ${{ order.grand_total }}
 
 We have the following shipping information for this order : 
 
